@@ -9,11 +9,45 @@
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/foundation.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
+
 
     <script src="{{ SITEURL }}/theme/js/vendor/custom.modernizr.js"></script>
     {% endblock head %}
 </head>
 <body>
+
+{% block navbar %}
+<nav class="top-bar">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="#">{{ SITENAME }}</a></h1>
+        </li>
+    </ul>
+    <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+        <li {% if page_name=="index" %}class="active"{% endif %}><a href="{{ SITEURL }}"><i class="icon-home"></i></a></li>
+        {% for title, link in MENUITEMS %}
+        <li><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+        {% if DISPLAY_PAGES_ON_MENU %}
+            {% for page in PAGES %}
+                {% if page.footer is not defined %}
+                <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <li class="has-dropdown"><a href="#">Blog</a>
+            <ul class="dropdown">
+            {% for cat,articles in categories %}
+                <li><a href="{{ cat.url }}">{{ cat.display_name }}</a></li>
+            {% endfor %}
+            </ul>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
 
 {% block content %}{% endblock %}
 

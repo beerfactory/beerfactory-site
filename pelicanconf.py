@@ -31,3 +31,9 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 THEME="theme"
+PLUGINS = ["cat_display_name",]
+
+#Categories display name mapping
+CAT_DISPLAY_NAME_MAP = {'project': 'Project',
+                        'nico': "Nico's stuffs",
+                        'yeah': "This is a test"}
