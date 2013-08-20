@@ -34,6 +34,6 @@ THEME="theme"
 PLUGINS = ["cat_display_name",]
 
 #Categories display name mapping
-CAT_DISPLAY_NAME_MAP = {'project': 'Project',
+CAT_DISPLAY_NAME_MAP = {'news': 'Project news',
                         'nico': "Nico's stuffs",
                         'yeah': "This is a test"}
