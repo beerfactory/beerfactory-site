@@ -37,3 +37,7 @@ PLUGINS = ["cat_display_name",]
 CAT_DISPLAY_NAME_MAP = {'news': 'Project news',
                         'nico': "Nico's stuffs",
                         'yeah': "This is a test"}
+#Categories subtitle mapping (subtitles are used in category page)
+CAT_SUBTITLE_MAP = {'news': 'General news about the project',
+                        'nico': "Personal stuffs from the project owner",
+                        'yeah': "This is a test"}

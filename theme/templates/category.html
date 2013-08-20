@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock title %}
+
+{% block content %}
+<section role="main">
+    <header class="hide-for-small" id="brand">
+        <div class="row">
+            <div class="large-12 columns">
+                <h1 class="hide-for-small">
+                    <i class="icon-thumbs-up-alt icon-large"></i>
+                    &nbsp;{{ page.title }}
+                </h1>
+                <h6 class="hide-for-small">{{ page.subtitle }}</h6>
+            </div>
+        </div>
+    </header>
+</section>
+
+{% include "social.html" %}
+
+<section id="mainContent">
+    <div class="row show-for-small">
+        <div class="large-12 columns">
+            <h1 class="hide-for-small">
+                {% if page.icon is defined %}
+                <i class="{{ page.icon }} icon-large"></i>&nbsp;
+                {% endif %}
+                {{ page.title }}
+            </h1>
+            <h6 class="hide-for-small">{{ page.subtitle }}</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-8 columns summary text-justify">
+            {{ page.summary }}
+        </div>
+        <div class="large-4 columns text-right">
+            {% include "google-ad.html" %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns text-justify">
+            {{ page.content }}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
