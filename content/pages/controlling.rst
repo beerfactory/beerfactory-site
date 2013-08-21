@@ -1,8 +1,9 @@
-Monitoring
-##########
+Controlling
+###########
 
 :date: 2013-08-20 22:13
 :author: Nicolas Jouanin
 :section: index
+:icon: icon-gear
 
-Beerfactory provides a hardware and software solutions to improve your microbrewery with any kind of sensors. Sensors data are collected and used to provide a complete monitoring of the brewing process.
+Beerfactory embedded solutions can be used to control brewery's actuators. Configuration and programming options allow to completelly automate the brewing process.
