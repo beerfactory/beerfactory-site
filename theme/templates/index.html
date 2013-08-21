@@ -2,4 +2,69 @@
 
 {% block content %}
 
+<section role="main">
+    <header class="hide-for-small" id="index">
+        <div class="row">
+            <div class="large-12 columns">
+                <h1 class="text-center"><i class="icon-beer icon-2x"></i>
+                    &nbsp;{{ SITENAME }}</h1>
+                <h2 class="text-center">Homebrewing goes professional</h2>
+            </div>
+        </div>
+    </header>
+</section>
+
+{% include "social.html" %}
+
+<section id="mainContent">
+    <div class="row show-for-small">
+        <div class="large-12 columns">
+            <h1 class="hide-for-small">
+                <i class="icon-beer"></i>
+                    &nbsp;{{ SITENAME }}
+            </h1>
+            <h2 class="text-center">Homebrewing goes professional</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-8 columns summary text-justify">
+            <p>Beerfactory project builds open-source embedded software and hardware for monitoring, controlling ang managing the homebrewing activity.</p>
+        </div>
+        <div class="large-3 large-offset-1 columns text-right">
+            {% include "google-ad.html" %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-8 columns text-justify">
+            {% for page in PAGES %}
+                {% if "index" in page.section %}
+                    <h5>
+                        {% if page.icon is defined %}
+                            <i class="{{ page.icon }} icon-large"></i>&nbsp;
+                        {% endif %}
+                        {{ page.title }}</h5>
+                    {{ page.content }}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <aside class="large-3 large-offset-1 columns">
+            <h5>Project news</h5>
+            <ul>
+            {% for cat, arts in categories %}
+                {% if "news" in cat.name %}
+                    {% for a in arts|sort(attribute='date')|batch(5)|first %}
+                        <li><a href="{{ SITE_URL }}/{{ a.url }}">{{ a.title }}</a></li>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </aside>
+    </div>
+</section>
+
 {% endblock %}

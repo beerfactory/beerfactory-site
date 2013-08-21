@@ -41,7 +41,7 @@
         <li class="has-dropdown"><a href="#">Blog</a>
             <ul class="dropdown">
             {% for cat,articles in categories %}
-                <li><a href="{{ cat.url }}">{{ cat.display_name }}</a></li>
+                <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.display_name }}</a></li>
             {% endfor %}
             </ul>
         </li>

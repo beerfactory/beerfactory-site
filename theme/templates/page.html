@@ -22,17 +22,17 @@
 <section id="mainContent">
     <div class="row show-for-small">
         <div class="large-12 columns">
-            <h1 class="hide-for-small">
+            <h1>
                 {% if page.icon is defined %}
-                <i class="{{ page.icon }} icon-large"></i>
+                <i class="{{ page.icon }} icon-large"></i>&nbsp;
                 {% endif %}
-                &nbsp;{{ page.title }}
+                {{ page.title }}
             </h1>
-            <h6 class="hide-for-small">{{ page.subtitle }}</h6>
+            <h6>{{ page.subtitle }}</h6>
         </div>
     </div>
     <div class="row">
-        <div class="large-8 columns summary">
+        <div class="large-8 columns summary text-justify">
             {{ page.summary }}
         </div>
         <div class="large-4 columns text-right">
@@ -40,7 +40,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="large-12 columns">
+        <div class="large-12 columns text-justify">
             {{ page.content }}
         </div>
     </div>
