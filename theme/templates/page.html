@@ -8,8 +8,10 @@
         <div class="row">
             <div class="large-12 columns">
                 <h1 class="hide-for-small">
-                    <i class="icon-thumbs-up-alt icon-large"></i>
-                    &nbsp;{{ page.title }}
+                    {% if page.icon is defined %}
+                    <i class="{{ page.icon }} icon-large"></i>&nbsp;
+                    {% endif %}
+                    {{ page.title }}
                 </h1>
                 <h6 class="hide-for-small">{{ page.subtitle }}</h6>
             </div>
@@ -40,7 +42,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="large-12 columns text-justify">
+        <div class="large-9 columns text-justify">
             {{ page.content }}
         </div>
     </div>
