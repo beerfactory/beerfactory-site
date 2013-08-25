@@ -1,0 +1,5 @@
+{% if tag_cloud %}
+    {% for tag in tag_cloud %}
+        <span class="tag-{{ tag.1 }}"><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></span>&nbsp;
+{% endfor %}
+{% endif %}

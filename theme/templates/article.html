@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }}{% endblock title %}
+
+{% block content %}
+<section role="main">
+    <header class="hide-for-small" id="brand">
+        <div class="row">
+            <div class="large-12 columns">
+                <h1 class="hide-for-small">
+                    {% if article.icon is defined %}
+                    <i class="{{ article.icon }} icon-large"></i>&nbsp;
+                    {% endif %}
+                    &nbsp;{{ article.title }}
+                </h1>
+                <h6 class="hide-for-small">{{ article.subtitle }}</h6>
+            </div>
+        </div>
+    </header>
+</section>
+
+{% include "social.html" %}
+
+<section id="mainContent">
+    <div class="row show-for-small">
+        <div class="large-12 columns">
+            <h1>
+                {% if article.icon is defined %}
+                <i class="{{ article.icon }} icon-large"></i>&nbsp;
+                {% endif %}
+                {{ article.title }}
+            </h1>
+            <h6>{{ article.subtitle }}</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-8 columns">
+            <div class="row">
+                <div class="large-8 columns summary text-justify">
+                    {{ article.summary }}
+                </div>
+            </div>
+            <div class="row">
+                <article class="large-8 columns text-justify">
+                    {{ article.content }}
+                    {% include 'disqus.html' %}
+                </article>
+            </div>
+        </div>
+        <div class="large-3 large-offset-1 columns">
+            <div class="text-right">
+            {% include "google-ad.html" %}
+            </div>
+        <aside>
+            <h5>Recent articles</h5>
+            <ul>
+                {% for a in articles|batch(5)|first %}
+                    <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
+                {% endfor %}
+            </ul>
+            <h5>Tags</h5>
+            {% include "tagcloud.html" %}
+        </aside>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

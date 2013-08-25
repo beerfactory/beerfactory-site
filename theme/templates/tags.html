@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ category.display_name }}{% endblock title %}
+{% block title %}{{ Archives }}{% endblock title %}
 
 {% block content %}
 <section role="main">
@@ -8,12 +8,9 @@
         <div class="row">
             <div class="large-12 columns">
                 <h1 class="hide-for-small">
-                    <i class="icon-folder-open icon-large"></i>
-                    &nbsp;{{ category.display_name }}
+                    <i class="icon-tags icon-large"></i>
+                    &nbsp;Tags
                 </h1>
-                {% if category.subtitle is defined %}
-                    <h6 class="hide-for-small">{{ category.subtitle }}</h6>
-                {% endif %}
             </div>
         </div>
     </header>
@@ -25,28 +22,18 @@
     <div class="row show-for-small">
         <div class="large-12 columns">
             <h1>
-                <i class="icon-folder-open icon-large"></i>
-                    &nbsp;{{ category.display_name }}
+                <i class="icon-tags icon-large"></i>
+                    &nbsp;Tags
             </h1>
-            {% if category.subtitle is defined %}
-                <h6>{{ category.subtitle }}</h6>
-            {% endif %}
         </div>
     </div>
     <div class="row">
         <div class="large-8 columns text-justify entry">
-            {% for article in (articles_page.object_list if articles_page else articles) %}
-                <article>
-                <h4 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
-                <p class="entry-info">
-                    {{ article.date.strftime('%c') }}
-                </p>
-                {{ article.summary }}
-                <p class="continue-reading">
-                    <a href="{{ SITEURL }}/{{ article.url }}">Read more <i class="icon-chevron-right"></i></a>
-                </p>
-                </article>
-            {% endfor %}
+            <ul>
+                {% for tag in tag_cloud %}
+                <li><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a>&nbsp;<small><em>( {{ tag.1 }} articles)</em></small></li>
+    {% endfor %}
+            </ul>
         </div>
         <aside class="large-3 large-offset-1 columns">
             <h5>Recent articles</h5>

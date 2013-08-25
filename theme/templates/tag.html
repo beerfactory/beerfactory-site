@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ category.display_name }}{% endblock title %}
+{% block title %}{{ tag.name }}{% endblock title %}
 
 {% block content %}
 <section role="main">
@@ -8,12 +8,9 @@
         <div class="row">
             <div class="large-12 columns">
                 <h1 class="hide-for-small">
-                    <i class="icon-folder-open icon-large"></i>
-                    &nbsp;{{ category.display_name }}
+                    <i class="icon-tag icon-large"></i>
+                    &nbsp;{{ tag.name }}
                 </h1>
-                {% if category.subtitle is defined %}
-                    <h6 class="hide-for-small">{{ category.subtitle }}</h6>
-                {% endif %}
             </div>
         </div>
     </header>
@@ -25,12 +22,9 @@
     <div class="row show-for-small">
         <div class="large-12 columns">
             <h1>
-                <i class="icon-folder-open icon-large"></i>
-                    &nbsp;{{ category.display_name }}
+                <i class="icon-tag icon-large"></i>
+                    &nbsp;{{ tag.name }}
             </h1>
-            {% if category.subtitle is defined %}
-                <h6>{{ category.subtitle }}</h6>
-            {% endif %}
         </div>
     </div>
     <div class="row">
@@ -57,7 +51,6 @@
             </ul>
             <h5>Tags</h5>
             {% include "tagcloud.html" %}
-        </aside>
     </div>
     {% if articles_page and articles_paginator.num_pages > 1 %}
         <div class="row">

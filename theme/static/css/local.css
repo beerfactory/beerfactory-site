@@ -7,6 +7,16 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #dfcc32;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #c79838;
+    text-decoration: none;
+}
+
 p {
     font-weight: 300;
 }
@@ -169,4 +179,13 @@ p.entry-info:before {
 
 .tag-4 {
     font-size:0.8em;
+}
+
+ul.pagination li.current a {
+    background: #be6a38;
+}
+
+button, .button {
+    background: #be6a38;
+    border-color: #794228;
 }

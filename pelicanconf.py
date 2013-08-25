@@ -31,7 +31,10 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 THEME="theme"
-PLUGINS = ["cat_display_name",]
+PLUGINS = ["cat_display_name","sitemap",]
+
+DEFAULT_PAGINATION=5
+DISQUS_SITENAME='beerfactory'
 
 #Categories display name mapping
 CAT_DISPLAY_NAME_MAP = {'news': 'Project news',
@@ -41,3 +44,16 @@ CAT_DISPLAY_NAME_MAP = {'news': 'Project news',
 CAT_SUBTITLE_MAP = {'news': 'General news about the project',
                         'nico': "Personal stuffs from the project owner",
                         'yeah': "This is a test"}
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
