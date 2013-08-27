@@ -19,4 +19,4 @@ def map_cat_diaply_name(sender, instance):
                 pass
 
 def register():
-        signals.content_object_init.connect(map_cat_diaply_name)
+        signals.content_object_init.connect(map_cat_diaply_name, sender=contents.Article)
