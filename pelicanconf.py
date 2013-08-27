@@ -57,3 +57,6 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
+
+GOOGLE_ANALYTICS="UA-37658015-2"
+MENUITEMS= (('Forum', 'http://forum.beerfactory.org/'),)

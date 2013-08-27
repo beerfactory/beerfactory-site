@@ -28,9 +28,6 @@
     <!-- Left Nav Section -->
     <ul class="left">
         <li {% if page_name=="index" %}class="active"{% endif %}><a href="{{ SITEURL }}"><i class="icon-home"></i></a></li>
-        {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
         {% if DISPLAY_PAGES_ON_MENU %}
             {% for page in PAGES %}
                 {% if "topbar-first" in page.section %}
@@ -52,6 +49,9 @@
                 {% endif %}
             {% endfor %}
         {% endif %}
+        {% for title, link in MENUITEMS %}
+        <li><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
     </ul>
 {% block navbar_ext %}
 {% endblock %}
@@ -84,41 +84,6 @@
   </script>
 
   <script src="{{ SITEURL }}/theme/js/foundation.min.js"></script>
-  <!--
-
-  <script src="js/foundation/foundation.js"></script>
-
-  <script src="js/foundation/foundation.alerts.js"></script>
-
-  <script src="js/foundation/foundation.clearing.js"></script>
-
-  <script src="js/foundation/foundation.cookie.js"></script>
-
-  <script src="js/foundation/foundation.dropdown.js"></script>
-
-  <script src="js/foundation/foundation.forms.js"></script>
-
-  <script src="js/foundation/foundation.joyride.js"></script>
-
-  <script src="js/foundation/foundation.magellan.js"></script>
-
-  <script src="js/foundation/foundation.orbit.js"></script>
-
-  <script src="js/foundation/foundation.reveal.js"></script>
-
-  <script src="js/foundation/foundation.section.js"></script>
-
-  <script src="js/foundation/foundation.tooltips.js"></script>
-
-  <script src="js/foundation/foundation.topbar.js"></script>
-
-  <script src="js/foundation/foundation.interchange.js"></script>
-
-  <script src="js/foundation/foundation.placeholder.js"></script>
-
-  <script src="js/foundation/foundation.abide.js"></script>
-
-  -->
 
   <script>
     $(document).foundation();
