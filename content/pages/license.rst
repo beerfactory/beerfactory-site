@@ -6,6 +6,7 @@ License
 :section: footer
 :summary: Licensing information
 :icon: icon-legal
+:order: 0
 
 Beerfactory is based on the `open-source <http://en.wikipedia.org/wiki/Open_source>`_ licensing model:
 

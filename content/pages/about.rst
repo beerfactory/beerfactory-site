@@ -6,6 +6,7 @@ About
 :section: footer
 :summary: General informations about the project
 :icon: icon-question-sign
+:order: 0
 
 Beerfactory is an open-source project created and maintained by `Nicolas Jouanin <https://twitter.com/NicolasJouanin>`_. This project provides both hardware and software solutions for managing a homebrewing activity.
 

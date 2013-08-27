@@ -7,5 +7,6 @@ Community
 :section: topbar-last,footer
 :icon: icon-thumbs-up-alt
 :summary: To be done
+:order: 0
 
 More content coming soon.

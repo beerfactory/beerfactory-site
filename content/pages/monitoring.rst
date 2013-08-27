@@ -5,5 +5,6 @@ Monitoring
 :author: Nicolas Jouanin
 :section: index
 :icon: icon-dashboard
+:order: 1
 
-Beerfactory provides a hardware and software solutions to improve your microbrewery with any kind of sensors. Sensors data are collected and used to provide a complete monitoring of the brewing process.
+Beerfactory provides hardware and software solutions to improve your microbrewery with any kind of sensors. Sensors data are collected and used to provide a complete monitoring of the brewing process.

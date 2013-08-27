@@ -41,7 +41,7 @@
     </div>
     <div class="row">
         <div class="large-8 columns text-justify">
-            {% for page in PAGES %}
+            {% for page in PAGES|sort(attribute="order") %}
                 {% if "index" in page.section %}
                     <h5>
                         {% if page.icon is defined %}
@@ -53,7 +53,7 @@
             {% endfor %}
             <hr/>
             <div class="text-center">
-                <a href="{{ SITEURL }}/article-1.html" class="button round">Get started&nbsp;<i class="icon-circle-arrow-right"></i></a>
+                <a href="{{ SITEURL }}//pages/getting-started.html" class="button round">Get started&nbsp;<i class="icon-circle-arrow-right"></i></a>
             </div>
         </div>
         <aside class="large-3 large-offset-1 columns">
