@@ -5,28 +5,41 @@
 <head>
     {% block head %}
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/foundation.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/local.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:700,400,400italic|Ubuntu:500,300,300italic" rel="stylesheet" type="text/css">
 
     <script src="{{ SITEURL }}/theme/js/vendor/custom.modernizr.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     {% endblock head %}
 </head>
 <body>
 
-<nav class="container top-bar">
-    <ul class="title-area">
-        <li class="name">
-            <h1><a href="#">{{ SITENAME }}</a></h1>
-        </li>
-    </ul>
-    <section class="top-bar-section">
-    <!-- Left Nav Section -->
-    <ul class="left">
+<nav class="navbar navbar-inverse" role="navigation">
+<!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">{{ SITENAME }}</a>
+  </div>
+ <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+  <!-- Left Nav Section -->
+    <ul class="nav navbar-nav">
         <li {% if page_name=="index" %}class="active"{% endif %}><a href="{{ SITEURL }}"><i class="icon-home"></i></a></li>
         {% if DISPLAY_PAGES_ON_MENU %}
             {% for page in PAGES %}
@@ -35,8 +48,8 @@
                 {% endif %}
             {% endfor %}
         {% endif %}
-        <li class="has-dropdown"><a href="#">Blog</a>
-            <ul class="dropdown">
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+            <ul class="dropdown-menu">
             {% for cat,articles in categories %}
                 <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.display_name }}</a></li>
             {% endfor %}
@@ -54,6 +67,7 @@
         {% endfor %}
     </ul>
 {% block navbar_ext %}
+  </div>
 {% endblock %}
 </nav>
 
@@ -77,16 +91,7 @@
 
 {% include "analytics.html" %}
 
-  <script>
-  document.write('<script src={{ SITEURL }}/theme/' +
-  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-
-  <script src="{{ SITEURL }}/theme/js/foundation.min.js"></script>
-
-  <script>
-    $(document).foundation();
-  </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery.js"></script>
 </body>
 </html>
