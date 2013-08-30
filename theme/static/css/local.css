@@ -1,5 +1,10 @@
+html {
+    font-size:100%;
+}
+
 body {
     padding-top: 51px;
+    font-size:100%;
 }
 
 body,h1,h2,h3,h4,h5,h6 {
@@ -196,4 +201,17 @@ ul.pagination li.current a {
 button, .button {
     background: #be6a38;
     border-color: #794228;
+}
+
+.btn-beer {
+    text-shadow: 0 1px 0 #000;
+    color: #fff;
+    background-image: -webkit-gradient(linear,left 0,left 100%,from(#be6a38),to(#794228));
+    background-image: -webkit-linear-gradient(top,#be6a38,0%,#794228,100%);
+    background-image: -moz-linear-gradient(top,#be6a38 0,#794228 100%);
+    background-image: linear-gradient(to bottom,#be6a38 0,#794228 100%);
+    background-repeat: repeat-x;
+    border-color: #e0e0e0;
+    border-color: #ccc;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#be6a38',endColorstr='#794228',GradientType=0);
 }
