@@ -215,3 +215,7 @@ button, .button {
     border-color: #ccc;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#be6a38',endColorstr='#794228',GradientType=0);
 }
+
+.continue-reading {
+    font-size: 90%;
+}
