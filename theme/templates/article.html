@@ -4,16 +4,18 @@
 
 {% block content %}
 <section role="main">
-    <header class="hide-for-small" id="brand">
-        <div class="row">
-            <div class="large-12 columns">
-                <h1 class="hide-for-small">
-                    {% if article.icon is defined %}
-                    <i class="{{ article.icon }} icon-large"></i>&nbsp;
-                    {% endif %}
-                    &nbsp;{{ article.title }}
-                </h1>
-                <h6 class="hide-for-small">{{ article.subtitle }}</h6>
+    <header class="hidden-sm" id="brand">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>
+                        {% if article.icon is defined %}
+                        <i class="{{ article.icon }} icon-large"></i>&nbsp;
+                        {% endif %}
+                        &nbsp;{{ article.title }}
+                    </h1>
+                    <h6>{{ article.subtitle }}</h6>
+                </div>
             </div>
         </div>
     </header>
@@ -21,9 +23,9 @@
 
 {% include "social.html" %}
 
-<section id="mainContent">
-    <div class="row show-for-small">
-        <div class="large-12 columns">
+<section class="container" id="mainContent">
+    <div class="row hidden-lg hidden-md">
+        <div class="col-sm-12">
             <h1>
                 {% if article.icon is defined %}
                 <i class="{{ article.icon }} icon-large"></i>&nbsp;
@@ -34,31 +36,26 @@
         </div>
     </div>
     <div class="row">
-        <div class="large-8 columns">
+        <div class="col-md-8">
             <div class="row">
-                <div class="large-12 columns summary text-justify">
+                <div class="col-md-12 summary text-justify">
                     {{ article.summary }}
                 </div>
             </div>
             <div class="row">
-                <article class="large-12 columns text-justify">
+                <article class="col-md-12 text-justify">
                     {{ article.content }}
                     {% include 'disqus.html' %}
                 </article>
             </div>
         </div>
-        <div class="large-3 large-offset-1 columns">
+        <div class="col-md-3 col-md-offset-1">
             <div class="text-right">
             {% include "google-ad.html" %}
             </div>
         <aside>
-            <h5>Recent articles</h5>
-            <ul>
-                {% for a in articles|batch(5)|first %}
-                    <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
-                {% endfor %}
-            </ul>
-            <h5>Tags</h5>
+            {% include "recents.html" %}
+            <h3>Tags</h3>
             {% include "tagcloud.html" %}
         </aside>
         </div>
