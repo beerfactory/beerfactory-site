@@ -8,8 +8,8 @@ a {
 }
 
 a:hover {
-    color: #dfcc32;
-    text-decoration: none;
+    color: rgb(121,66,40);
+    text-decoration: underline;
 }
 
 a:visited {
