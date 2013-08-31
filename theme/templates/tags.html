@@ -4,13 +4,15 @@
 
 {% block content %}
 <section role="main">
-    <header class="hide-for-small" id="brand">
-        <div class="row">
-            <div class="large-12 columns">
-                <h1 class="hide-for-small">
+    <header class="hidden-sm" id="brand">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>
                     <i class="icon-tags icon-large"></i>
                     &nbsp;Tags
                 </h1>
+                </div>
             </div>
         </div>
     </header>
@@ -18,9 +20,9 @@
 
 {% include "social.html" %}
 
-<section id="mainContent">
-    <div class="row show-for-small">
-        <div class="large-12 columns">
+<section class="container" id="mainContent">
+    <div class="row hidden-lg hidden-md">
+        <div class="col-sm-12">
             <h1>
                 <i class="icon-tags icon-large"></i>
                     &nbsp;Tags
@@ -28,47 +30,42 @@
         </div>
     </div>
     <div class="row">
-        <div class="large-8 columns text-justify entry">
+        <div class="col-md-8 text-justify entry">
             <ul>
                 {% for tag in tag_cloud %}
-                <li><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a>&nbsp;<small><em>( {{ tag.1 }} articles)</em></small></li>
+                <li><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></li>
     {% endfor %}
             </ul>
         </div>
-        <aside class="large-3 large-offset-1 columns">
-            <h5>Recent articles</h5>
-            <ul>
-                {% for a in articles|batch(5)|first %}
-                    <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
-                {% endfor %}
-            </ul>
-            <h5>Tags</h5>
+        <aside class="col-md-3 col-md-offset-1">
+            {% include "recents.html" %}
+            <h3>Tags</h3>
             {% include "tagcloud.html" %}
         </aside>
     </div>
     {% if articles_page and articles_paginator.num_pages > 1 %}
         <div class="row">
-            <div class="large-8 columns text-justify">
-                <div class="pagination-centered">
+            <div class="col-md-8 text-justify">
+                <div class="centered">
                     <ul class="pagination">
                         {% if articles_page.has_previous() %}
                             {% set num = articles_page.previous_page_number() %}
-                            <li class="arrow"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">&larr;</a></li>
+                            <li><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">&larr;</a></li>
                         {% else %}
-                            <li class="arrow unavailable"><a href="#">&larr;</a></li>
+                            <li class="disabled"><a href="#">&larr;</a></li>
                         {% endif %}
                         {% for num in range( 1, 1 + articles_paginator.num_pages ) %}
-                            <li class="{{ 'current' if num == articles_page.number else '' }}"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a></li>
+                            <li class="{{ 'active' if num == articles_page.number else '' }}"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a></li>
                         {% endfor %}
                         {% if articles_page.has_next() %}
-                                <li class="arrow"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">&rarr;</a></li>
+                                <li><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">&rarr;</a></li>
                         {% else %}
-                                <li class="arrow unavailable"><a href="#">&rarr;</a></li>
+                                <li class="disabled"><a href="#">&rarr;</a></li>
                     {% endif %}
                     </ul>
                 </div>
             </div>
-            <div class="large-3 columns text-justify">
+            <div class="col-md-3 text-justify">
             </div>
         </div>
     {% endif %}

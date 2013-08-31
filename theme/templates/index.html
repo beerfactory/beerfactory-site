@@ -3,9 +3,9 @@
 {% block content %}
 
 <section role="main">
-    <header class="hide-for-small" id="index">
+    <header class="hidden-sm" id="index">
         <div class="row">
-            <div class="large-12 columns">
+            <div class="col-md-12">
                 <h1 class="text-center"><i class="icon-beer icon-2x"></i>
                     &nbsp;{{ SITENAME }}</h1>
                 <h2 class="text-center">Homebrewing goes professional</h2>
@@ -16,10 +16,10 @@
 
 {% include "social.html" %}
 
-<section id="mainContent">
-    <div class="row show-for-small">
-        <div class="large-12 columns">
-            <h1 class="hide-for-small">
+<section class="container" id="mainContent">
+    <div class="row hidden-lg hidden-md">
+        <div class="col-sm-12">
+            <h1 class="text-center">
                 <i class="icon-beer"></i>
                     &nbsp;{{ SITENAME }}
             </h1>
@@ -27,46 +27,38 @@
         </div>
     </div>
     <div class="row">
-        <div class="large-8 columns summary text-justify">
+        <div class="col-md-8 summary text-justify">
             <p>Beerfactory project builds open-source embedded software and hardware for monitoring, controlling ang managing the homebrewing activity.</p>
         </div>
-        <div class="large-3 large-offset-1 columns text-right">
+        <div class="col-md-3 col-md-offset-1 text-right">
             {% include "google-ad.html" %}
         </div>
     </div>
     <div class="row">
-        <div class="large-12 columns">
+        <div class="col-md-12">
             &nbsp;
         </div>
     </div>
     <div class="row">
-        <div class="large-8 columns text-justify">
+        <div class="col-md-8 text-justify">
             {% for page in PAGES|sort(attribute="order") %}
                 {% if "index" in page.section %}
-                    <h5>
+                    <h4>
                         {% if page.icon is defined %}
                             <i class="{{ page.icon }} icon-large"></i>&nbsp;
                         {% endif %}
-                        <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h5>
+                        <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+                    </h4>
                     {{ page.content }}
                 {% endif %}
             {% endfor %}
             <hr/>
             <div class="text-center">
-                <a href="{{ SITEURL }}//pages/getting-started.html" class="button round">Get started&nbsp;<i class="icon-circle-arrow-right"></i></a>
+                <a href="{{ SITEURL }}//pages/getting-started.html" class="btn btn-lg btn-beer">Get started&nbsp;<i class="icon-circle-arrow-right"></i></a>
             </div>
         </div>
-        <aside class="large-3 large-offset-1 columns">
-            <h5>Project news</h5>
-            <ul>
-            {% for cat, arts in categories %}
-                {% if "news" in cat.name %}
-                    {% for a in arts|batch(5)|first %}
-                        <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
-                    {% endfor %}
-                {% endif %}
-            {% endfor %}
-            </ul>
+        <aside class="col-md-3 col-md-offset-1">
+            {% include "news.html" %}
         </aside>
     </div>
 </section>

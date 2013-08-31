@@ -1,0 +1,12 @@
+{% if categories %}
+    <h4>Project news</h4>
+    <ul>
+    {% for cat, arts in categories %}
+        {% if "news" in cat.name %}
+            {% for a in arts|batch(5)|first %}
+                <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endif %}

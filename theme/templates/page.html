@@ -4,16 +4,18 @@
 
 {% block content %}
 <section role="main">
-    <header class="hide-for-small" id="brand">
-        <div class="row">
-            <div class="large-12 columns">
-                <h1 class="hide-for-small">
+    <header class="hidden-sm" id="brand">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>
                     {% if page.icon is defined %}
                     <i class="{{ page.icon }} icon-large"></i>&nbsp;
                     {% endif %}
                     {{ page.title }}
                 </h1>
-                <h6 class="hide-for-small">{{ page.subtitle }}</h6>
+                <h4>{{ page.subtitle }}</h4>
+                </div>
             </div>
         </div>
     </header>
@@ -21,9 +23,9 @@
 
 {% include "social.html" %}
 
-<section id="mainContent">
-    <div class="row show-for-small">
-        <div class="large-12 columns">
+<section class="container" id="mainContent">
+    <div class="row hidden-lg hidden-md">
+        <div class="col-sm-12">
             <h1>
                 {% if page.icon is defined %}
                 <i class="{{ page.icon }} icon-large"></i>&nbsp;
@@ -34,15 +36,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="large-8 columns summary text-justify">
+        <div class="col-md-8 summary text-justify">
             {{ page.summary }}
         </div>
-        <div class="large-4 columns text-right">
+        <div class="col-md-3 col-md-offset-1 text-right">
             {% include "google-ad.html" %}
         </div>
     </div>
     <div class="row">
-        <div class="large-9 columns text-justify">
+        <div class="col-md-9 text-justify">
             {{ page.content }}
         </div>
     </div>
