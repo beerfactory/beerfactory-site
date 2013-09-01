@@ -8,7 +8,7 @@ About
 :icon: icon-question-sign
 :order: 0
 
-Beerfactory is an open-source project created and maintained by `Nicolas Jouanin <https://twitter.com/NicolasJouanin>`_. This project provides both hardware and software solutions for managing a homebrewing activity.
+Beerfactory is an open-source project created and maintained by `Nicolas Jouanin <https://twitter.com/NicolasJouanin>`_. This project provides both hardware and software solutions for managing homebrewing activity.
 
 Beerfactory code and hardware are licensed under `GPL v3 <http://www.gnu.org/licenses/gpl.html>`_ license. Documentation is licensed under Creative Commons `CC BY 3.0 <http://creativecommons.org/licenses/by/3.0/>`_. More information concerning licensing is available on the `licensing information <|filename|license.rst>`_ page.
 
