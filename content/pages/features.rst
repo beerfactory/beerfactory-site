@@ -5,6 +5,7 @@ Features
 :author: Nico
 :section: topbar-first
 :summary: List of major features
+:keywords: BrewBox, BrewManager, monitoring, controling, automation, DIY, ERP, homebrewing, raspberry, beaglebone, arduino
 :icon: icon-signal
 :order: 1
 
@@ -27,7 +28,6 @@ General architecture
 BrewBox-hardware provides an interface between a microbrewery electronics equipements and the BrewBox software used to monitor and control the microbrewery. BrewBox-hardware can be used to collects data from sensors installed in a microbewery like temperature sensors, flow sensors or level sensors. It is also used to send commands to the brewery actuators like pumps, valves or heating elements.
 
 BrewBox-hardware mostly consists of a `single-board computer <http://en.wikipedia.org/wiki/Single_board_computer>`_ (like `Raspberry Pi <http://www.raspberrypi.org/>`_ or `BeagleBone Black <http://beagleboard.org/Products/BeagleBone%20Black>`_) and an extension board plugged to it using a `GPIO <http://en.wikipedia.org/wiki/GPIO>`_ port. The single board computer also hosts Brewbox-software component which interacts with the extension board and the user.
-
 
 .. raw::html
 

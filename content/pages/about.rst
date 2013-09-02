@@ -5,6 +5,7 @@ About
 :author: Nico
 :section: footer
 :summary: General informations about the project
+:keywords: open-source, homebrewing, DIY
 :icon: icon-question-sign
 :order: 0
 

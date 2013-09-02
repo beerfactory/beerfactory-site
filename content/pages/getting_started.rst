@@ -6,6 +6,7 @@ Getting started
 :section: topbar-first
 :summary: Beerfactory provides open source software and hardware for managing a homebrewing activity
 :icon: icon-play-sign
+:keywords: BrewBox, BrewManager, monitoring, controling, automation, DIY, ERP, homebrewing
 :order: 0
 
 .. raw:: html

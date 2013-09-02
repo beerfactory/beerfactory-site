@@ -1,5 +1,5 @@
-Controlling
-###########
+Control
+#######
 
 :date: 2013-08-20 22:13
 :author: Nicolas Jouanin
@@ -7,4 +7,4 @@ Controlling
 :icon: icon-gear
 :order: 2
 
-Beerfactory embedded solution can be used to control brewery actuators. Configuration and programming options allow to completelly automate the brewing process.
+Beerfactory can be used to control brewery actuators. Configuration and programming options allow to completelly automate the brewing process.
