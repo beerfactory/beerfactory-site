@@ -21,7 +21,7 @@ What is Beerfactory ?
 Beerfactory focuses on providing solutions to *monitor, control and manage the homebrewing activity* and consists of two sub-projects :
 
  * `BrewBox <|filename|/pages/features.rst>`_ : provides software anrd hardware for monitoring and controling the beer production process.
- * `FactoryManager <|filename|/pages/features.rst>`_ : a lightweight ERP specialised in homebrewing management.
+ * `BrewManager <|filename|/pages/features.rst>`_ : a lightweight ERP specialised in homebrewing management.
 
 See details on the `features page <|filename|/pages/features.rst>`_.
 

@@ -27,7 +27,7 @@ Software
 ~~~~~~~~
 Brewbox also comes with a dedicated software for driving the extension board. At the lowest level, this software manages output ports states, collect and translate input values. At a higher level the software uses all these data to report sensor informations and allow actuator controling.
 
-FactoryManager
-==============
+BrewManager
+===========
 
-FactoryManager provides a lightweight ERP software for managing the whole homebrewing activity. Features are still to be defined but this includes stock, purchases, sales, production and customer management.
+BrewManager provides a lightweight ERP software for managing the whole homebrewing activity. Features are still to be defined but this includes stock, purchases, sales, production and customer management.
