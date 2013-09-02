@@ -40,5 +40,5 @@ Beerfactory is not a beer recipe designer, there are still plenty of good (free)
 What's next ?
 -------------
 
-This project is in features definition and general architecture analysis. Project activity will be reported on the `blog </category/news.html>`_. Anyone interested in this project is welcome to contribute through the `forum <http://forum.beerfactory.org>`_.
+This project is in features definition and general architecture analysis. Project activity will be reported on the `blog </category/news.html>`_. Anyone interested in this project is welcome to contribute on the `community forum <http://forum.beerfactory.org>`_.
 
