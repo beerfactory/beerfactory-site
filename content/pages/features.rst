@@ -29,7 +29,7 @@ BrewBox-hardware provides an interface between a microbrewery electronics equipe
 
 BrewBox-hardware mostly consists of a `single-board computer <http://en.wikipedia.org/wiki/Single_board_computer>`_ (like `Raspberry Pi <http://www.raspberrypi.org/>`_ or `BeagleBone Black <http://beagleboard.org/Products/BeagleBone%20Black>`_) and an extension board plugged to it using a `GPIO <http://en.wikipedia.org/wiki/GPIO>`_ port. The single board computer also hosts Brewbox-software component which interacts with the extension board and the user.
 
-.. raw::html
+.. raw:: html
 
   <div class="alert alert-warning">
   TODO : Add a schema
