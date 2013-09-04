@@ -7,5 +7,5 @@ Manage
 :icon: icon-money
 :order: 3
 
-Last but not least, use Beerfactory to manage your brewery activity, just like a professional !
+The BrewManager project helps you to manage your brewery activity, just like a professional !
 

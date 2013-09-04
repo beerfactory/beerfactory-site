@@ -7,4 +7,4 @@ Monitor
 :icon: icon-dashboard
 :order: 1
 
-Beerfactory provides hardware and software to improve your microbrewery with any kind of sensors. Sensors data are collected and used to provide a complete monitoring of the brewing process.
+The BrewBox project provides hardware and software to improve your home brewery with any kind of sensors. Sensors data are collected and used to provide a complete monitoring of the brewing process.

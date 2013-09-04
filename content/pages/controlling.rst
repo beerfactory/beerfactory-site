@@ -7,4 +7,4 @@ Control
 :icon: icon-gear
 :order: 2
 
-Beerfactory can be used to control brewery actuators. Configuration and programming options allow to completelly automate the brewing process.
+BrewBox can also be used to control brewery actuators. Configuration and programming options allow to build a complete automation system of the brewing process.
