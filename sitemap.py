@@ -158,8 +158,8 @@ class SitemapGenerator(object):
 
         pages = self.context['pages'] + self.context['articles'] \
                 + [ c for (c, a) in self.context['categories']] \
-                + [ t for (t, a) in self.context['tags']] \
-                + [ a for (a, b) in self.context['authors']]
+                + [ t for (t, a) in self.context['tags']] # \
+#                + [ a for (a, b) in self.context['authors']]
 
         for article in self.context['articles']:
             pages += article.translations
