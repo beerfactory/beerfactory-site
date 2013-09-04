@@ -19,7 +19,7 @@ Features
 BrewBox
 =======
 
-BrewBox includes hardware and software components for monitoring and controling a microbrewery. Sections below describes BrewBox features in details.
+BrewBox includes hardware and software components for monitoring and controling a home brewery. Sections below describes BrewBox features in details.
 
 
 General architecture
@@ -54,4 +54,4 @@ Brewbox also comes with a dedicated software for driving the extension board. At
 BrewManager
 ===========
 
-BrewManager provides a lightweight ERP software for managing the whole homebrewing activity. Features are still to be defined but this includes stock, purchases, sales, production and customer management.
+BrewManager provides a lightweight ERP software for managing the whole home brewing activity. Features are still to be defined but this includes stock, purchases, sales, production and customer management.

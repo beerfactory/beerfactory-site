@@ -7,30 +7,31 @@ Getting started
 :summary: Beerfactory provides open source software and hardware for managing a homebrewing activity
 :icon: icon-play-sign
 :keywords: BrewBox, BrewManager, monitoring, controling, automation, DIY, ERP, homebrewing
+:description: Getting started with beerfactory projects
 :order: 0
 
 .. raw:: html
 
   <div class="alert alert-info">
-  This project is in early stage. For now, this page describes what we try to achieve.
+  This project is in early stage. Read the following pages to know what we try to achieve.
   </div>
 
 
 What is Beerfactory ?
 ---------------------
 
-Beerfactory focuses on providing solutions to *monitor, control and manage the homebrewing activity* and consists of two sub-projects :
+Beerfactory focuses on providing open source solutions for managing home brewing activity. Initially it will consists of two sub-projects :
 
- * `BrewBox <|filename|/pages/features.rst>`_ : provides software anrd hardware for monitoring and controling the beer production process.
- * `BrewManager <|filename|/pages/features.rst>`_ : a lightweight ERP specialised in homebrewing management.
+ * `BrewBox <|filename|/pages/features.rst>`_ : software and hardware for *monitoring and controling* the beer production process.
+ * `BrewManager <|filename|/pages/features.rst>`_ : a lightweight ERP specialised in home brewing management.
 
-See details on the `features page <|filename|/pages/features.rst>`_.
+For more information, see the `features page <|filename|/pages/features.rst>`_ which describes both projects in details.
 
 
-What beerfactory is not ?
+What Beerfactory is not ?
 -------------------------
 
-Beerfactory is not a beer recipe designer, there are still plenty of good (free) software for this :
+Beerfactory is not a beer recipe designer, there are still plenty of good softwares for this :
 
  * `Beersmith <http://beersmith.com/>`_
  * `BeerTools <http://www.beertools.com/>`_
@@ -41,5 +42,5 @@ Beerfactory is not a beer recipe designer, there are still plenty of good (free)
 What's next ?
 -------------
 
-This project is in features definition and general architecture analysis. Project activity will be reported on the `blog </category/news.html>`_. Anyone interested in this project is welcome to contribute on the `community forum <http://forum.beerfactory.org>`_.
+BrewBox project is in features definition and general architecture analysis. BrewManager will come later. Project activity will be reported on the `blog </category/news.html>`_. Anyone interested in this project is welcome to contribute on the `community forum <http://forum.beerfactory.org>`_.
 
