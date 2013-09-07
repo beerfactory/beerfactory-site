@@ -7,4 +7,4 @@ Control
 :icon: icon-gear
 :order: 2
 
-BrewBox can also be used to control brewery actuators. Configuration and programming options allow to build a complete automation system of the brewing process.
+`BrewBox <|filename|/pages/features/brewbox-features.rst>`_ can also be used to control brewery actuators. Configuration and programming options allow to build a complete automation system of the brewing process.

@@ -4,9 +4,9 @@ Getting started
 :date: 2013-08-25 11:47
 :author: Nico
 :section: topbar-first
-:summary: Beerfactory provides open source software and hardware for managing a homebrewing activity
+:summary: Beerfactory provides open source software and hardware for managing a home brewing activity
 :icon: icon-play-sign
-:keywords: BrewBox, BrewManager, monitoring, controling, automation, DIY, ERP, homebrewing
+:keywords: BrewBox, BrewManager, monitoring, controling, automation, DIY, ERP, home brewing
 :description: Getting started with beerfactory projects
 :order: 0
 

@@ -7,5 +7,5 @@ Manage
 :icon: icon-money
 :order: 3
 
-The BrewManager project helps you to manage your brewery activity, just like a professional !
+The `BrewManager <|filename|/pages/features/brewbox-features.rst>`_ project helps you to manage your brewery activity, just like a professional !
 

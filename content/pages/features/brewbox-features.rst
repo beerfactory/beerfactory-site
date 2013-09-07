@@ -5,7 +5,7 @@ BrewBox
 :author: Nico
 :section: features
 :summary: List of BrewBox major features
-:keywords: BrewBox, Bmonitoring, controling, automation, DIY, homebrewing, raspberry, beaglebone, arduino
+:keywords: BrewBox, monitoring, controling, automation, DIY, home brewing, raspberry, beaglebone, arduino
 :icon: icon-signal
 :order: 1
 
