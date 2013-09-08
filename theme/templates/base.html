@@ -24,10 +24,16 @@
         {% if article.keywords is defined %}
             <meta name="keywords" content="{{ article.keywords }}">
         {% endif %}
+        {% if article.description is defined %}
+            <meta name="description" content="{{ article.description }}">
+        {% endif %}
     {% endif %}
     {% if page %}
         {% if page.keywords is defined %}
             <meta name="keywords" content="{{ page.keywords }}">
+        {% endif %}
+        {% if page.description is defined %}
+            <meta name="description" content="{{ page.description }}">
         {% endif %}
     {% endif %}
 </head>
