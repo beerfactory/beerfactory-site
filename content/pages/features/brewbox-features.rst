@@ -4,8 +4,8 @@ BrewBox
 :date: 2013-09-07 16:29
 :author: Nico
 :section: features
-:summary: List of BrewBox major features
-:keywords: BrewBox, monitoring, controling, automation, DIY, home brewing, raspberry, beaglebone, arduino
+:summary: BrewBox features
+:keywords: BrewBox, monitoring, controlling, automation, DIY, home brewing, beaglebone
 :icon: icon-signal
 :order: 1
 
@@ -16,7 +16,7 @@ BrewBox
   </div>
 
 
-BrewBox includes hardware and software components for monitoring and controling a home brewery. Sections below describes BrewBox features in details.
+BrewBox provides hardware and software components for monitoring and controlling a home brewery. Sections below describes BrewBox features in details.
 
 
 General architecture
