@@ -20,7 +20,7 @@ Getting started
 What is Beerfactory ?
 ---------------------
 
-Beerfactory focuses on providing open source solutions for managing home brewing activity. Initially it will consists of two sub-projects :
+Beerfactory focuses on providing open source/hardware solutions for managing home brewing activity. It is based on DIY methods and will initially  consist of two sub-projects :
 
  * `BrewBox <|filename|/pages/features/brewbox-features.rst>`_ : software and hardware for *monitoring and controling* the beer production process.
  * `BrewManager <|filename|/pages/features/brewbox-features.rst>`_ : a *lightweight ERP* specialised in home brewing management.
