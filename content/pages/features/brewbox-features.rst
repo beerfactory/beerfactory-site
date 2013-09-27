@@ -61,7 +61,7 @@ Control
 Hardware interface
 ------------------
 
-Home brewery controling means acting on the brewery equipments in order to go through brewing steps like heating the boil kettle or transfering the mash. Actions can be manual (switching on a pump, lighting a gaz burner, etc.) or automated. This is where BrewBox helps. Besides hardware inputs, BrewBox hardware also provides several output types in order to drive brewery acutators :
+Home brewery controling means acting on the brewery equipments in order to go through brewing steps like heating the boil kettle or transfering the mash. Actions can be manual (switching on a pump, lighting a gaz burner, etc.) or automated. This is where BrewBox helps. Besides hardware inputs, BrewBox hardware therefore provides several output types in order to drive brewery actuators :
 
 - *5V to 12V digital outputs* used to drive on/off actuators like valves or LED
 - *5V to 12V DC outputs* with `Pulse Width Modulation (PWM) <http://en.wikipedia.org/wiki/Pulse-width_modulation>`_. These outputs can be used to drive and control pump speed
@@ -73,7 +73,7 @@ Home brewery controling means acting on the brewery equipments in order to go th
 Software
 --------
 
-As for monitoring BrewBox software will drive the hardware interface outputs to control brewery actuators. Values or states sent to ouptus will depend on programmatic setup. Brewer will be able to :
+As for monitoring BrewBox software will drive the hardware interface outputs to control brewery actuators. Values or states sent to outputs will depend on programmatic setup. Brewer will be able to :
 
 - manually set the state or value of some outputs
 - automatically trigger state change or value on physical quantity change
