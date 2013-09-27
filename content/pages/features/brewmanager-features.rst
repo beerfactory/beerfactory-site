@@ -4,16 +4,18 @@ BrewManager
 :date: 2013-09-07 16:29
 :author: Nico
 :section: features
-:summary: List of BrewManager major features
-:keywords: BrewBox, Bmonitoring, controling, automation, DIY, homebrewing, raspberry, beaglebone, arduino
+:summary: BrewManager provides a lightweight ERP software for managing the whole home brewing activity
+:keywords: BrewBox, monitoring, controling, automation, DIY, homebrewing, ERP
 :icon: icon-signal
 :order: 2
 
-.. raw:: html
+BrewManager will come later in time. Excepted main features are :
 
-  <div class="alert alert-warning">
-  This page is under construction.
-  </div>
+- *Stock management* : manage brewery goods quantities (hops, malt, yeast, etc.), use-by date, stock movement, etc.
+- *Purchases/Sales* : manage provider and customers, prices, goods catalog, etc.
+- *Production management* : recipes and bill of materials, batch management, production scheduling
+- *CRM* : Quotations and orders
+- *Reporting*
 
+`Suggestions or features requests are welcome on the forum <http://forum.beerfactory.org/index.php?p=/categories/brewmanager-suggesions>`_.
 
-BrewManager provides a lightweight ERP software for managing the whole home brewing activity. Features are still to be defined but this includes stock, purchases, sales, production and customer management.

@@ -40,5 +40,6 @@ Beerfactory is not a beer recipe designer, there are already plenty of good soft
 What's next ?
 -------------
 
-BrewBox is in features definition and general architecture analysis. BrewManager will come later. Project activity will be reported on the `blog </category/news.html>`_. Anyone interested in this project is welcome to contribute on the `community forum <http://forum.beerfactory.org>`_.
+The initial goal is to release a first stable bersion of BrewBox. BrewManager will come later. Project activity will be reported on the `blog </category/news.html>`_. Anyone interested in this project is welcome to contribute on the `community forum <http://forum.beerfactory.org>`_ or see the project's source `repositories on Github <https://github.com/beerfactory>`_ .
+
 
