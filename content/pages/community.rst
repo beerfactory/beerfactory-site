@@ -1,12 +1,12 @@
-Community
+Communauté
 ##############
 
 :date: 2013-08-19 19:34
 :author: Nicolas Jouanin
-:subtitle: Ways to get involved in beerfactory
+:subtitle: Comment contribuer à Beerfactory ?
 :section: topbar-last,footer
 :icon: icon-thumbs-up-alt
-:summary: To be done
+:summary: A compléter
 :order: 0
 
-More content coming soon.
+Plus d'informations plus tard.

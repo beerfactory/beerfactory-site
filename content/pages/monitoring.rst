@@ -1,5 +1,5 @@
-Monitor
-#######
+Surveiller
+##########
 
 :date: 2013-08-20 22:13
 :author: Nicolas Jouanin
@@ -7,4 +7,4 @@ Monitor
 :icon: icon-dashboard
 :order: 1
 
-The `BrewBox <|filename|/pages/features/brewbox-features.rst>`_ project provides open-source hardware and software to improve a home brewery with any kind of sensors. Sensors data can be collected and used to provide a complete monitoring of the brewing process.
+`BrewBox <|filename|/pages/features/brewbox-features.rst>`_ fournit une solution logicielle et matérielle permettant d'équiper une pico-brasserie avec différents types de capteurs. Les données des capteurs sont collectées et utilisées pour fournir une solution complète de surveillance, de contrôle et d'automatisation du processus de brassage.
