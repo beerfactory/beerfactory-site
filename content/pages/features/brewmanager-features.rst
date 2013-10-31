@@ -4,18 +4,17 @@ BrewManager
 :date: 2013-09-07 16:29
 :author: Nico
 :section: features
-:summary: BrewManager est un ERP léger permettant de gérer l'activité complète du brassage amateur
-:keywords: BrewBox, surveillance, contrôle, automatisation, DIY, brassage amateur, ERP
+:summary: BrewManager provides a lightweight ERP software for managing the whole home brewing activity
+:keywords: BrewBox, monitoring, controling, automation, DIY, homebrewing, ERP
 :icon: icon-signal
 :order: 2
 
-Le projet BrewManager démarrera plus tard. Il proposera les fonctionnalités suivantes (entre autres):
+BrewManager will come later in time. Its main features will be  :
 
-- *Gestion de stocks* : gestion des stocks d'ingrédients (houblon, malt, levure, etc.), des dates d'utilisation, mouvements de stocks, etc.
-- *Achats/Ventes* : Gestion des fournisseurs et des clients, gestion des prix, des catalogues, etc.
-- *Gestion de production* : recettes et listes d'ingrédients, gestion des brassins, planinfication de la production
-- *CRM* : Devis et commandes
+- *Stock management* : manage brewery goods quantities (hops, malt, yeast, etc.), use-by date, stock movement, etc.
+- *Purchases/Sales* : manage provider and customers, prices, goods catalog, etc.
+- *Production management* : recipes and bill of materials, batch management, production scheduling
+- *CRM* : Quotations and orders
 - *Reporting*
 
-Les `suggestions ou les demandes de fonctionnalités sont les bienvenues sur le forum <http://forum.beerfactory.org/index.php?p=/categories/brewmanager-suggesions>`_.
-
+`Suggestions or features requests are welcome on the forum <http://forum.beerfactory.org/index.php?p=/categories/brewmanager-suggesions>`_.

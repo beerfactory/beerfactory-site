@@ -1,4 +1,4 @@
-Surveiller
+Monitoring
 ##########
 
 :date: 2013-08-20 22:13
@@ -7,4 +7,4 @@ Surveiller
 :icon: icon-dashboard
 :order: 1
 
-`BrewBox <|filename|/pages/features/brewbox-features.rst>`_ fournit une solution logicielle et matérielle permettant d'équiper une pico-brasserie avec différents types de capteurs. Les données des capteurs sont collectées et utilisées pour fournir une solution complète de surveillance, de contrôle et d'automatisation du processus de brassage.
+`BrewBox <|filename|/pages/features/brewbox-features.rst>`_ provides open-source hardware and software components to improve your home brewery with any kind of sensors. Data collected from sensors are used to monitor the brewing process and the brewery activity.

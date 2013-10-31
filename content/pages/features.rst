@@ -1,9 +1,9 @@
-Fonctionnalités
-###############
+Features
+########
 
 :date: 2013-09-01 22:43
 :author: Nico
-:summary: Fonctionnalités du projet
+:summary: Projects features
 :icon: icon-signal
 :order: 1
 

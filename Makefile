@@ -12,10 +12,10 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=localhost
-SSH_PORT=22
-SSH_USER=root
-SSH_TARGET_DIR=/var/www
+SSH_HOST=www.beerfactory.org
+SSH_PORT=443
+SSH_USER=nico
+SSH_TARGET_DIR=/var/www/default
 
 S3_BUCKET=my_s3_bucket
 
