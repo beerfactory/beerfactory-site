@@ -12,8 +12,8 @@ BrewBox
 
 Accès direct aux sections :
 
-- `Surveillance`_
-- `Contrôle`_
+- `Monitoring`_
+- `Control`_
 
 Monitoring
 ==========
