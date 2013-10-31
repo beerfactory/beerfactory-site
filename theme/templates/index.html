@@ -47,7 +47,7 @@
                                 {% if page.icon is defined %}
                                     <i class="{{ page.icon }} icon-large"></i>&nbsp;
                                 {% endif %}
-                                <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+                                {{ page.title }}
                             </h4>
                             {{ page.content }}
                         {% endif %}
