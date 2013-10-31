@@ -5,8 +5,8 @@ BrewBox
 :title: BrewBox
 :author: Nico
 :section: features
-:summary: BrewBox est constitué de composants logiciels et matériels permettant de surveiller et contrôler une pico-brasserie
-:keywords: BrewBox, surveillance, contrôle, automatisation, DIY, brassage amateur, beaglebone
+:summary: BrewBox consists of hardware and software components combined together to monitor and control a home brewery
+:keywords: BrewBox, monitoring, controlling, automation, DIY, home brewing, beaglebone
 :icon: icon-signal
 :order: 1
 
@@ -15,67 +15,66 @@ Accès direct aux sections :
 - `Surveillance`_
 - `Contrôle`_
 
-Surveillance
-============
+Monitoring
+==========
 
-Surveiller une pico-brasserie c'est suivre différentes grandeurs physiques qui sont importantes durant le brassage comme la température des paliers d'empâtage, le contrôle de l'ébullition ou les flux de liquides. BrewBox vous aide dans cette tâche en fournissant une *interface matérielle avec les capteurs équipant la pico-brasserie* et un *logiciel de collecte et d'analyse des données provenant de ces capteurs*.
+Home brewery monitoring means watching different kind of physical quantities which are important during the brewing process like mash steps temperature, boiling control or liquid flow rate. BrewBox helps you in this task by providing a *hardware interface with sensors fitted in your brewery* and a *software for collecting and analyze data retrieved from these sensors*.
 
-Interface matérielle
---------------------
+Hardware interface
+------------------
 
-L'interface matérielle de BrewBox est principalement une interface électronique entre les capteurs équipant une pico-brasserie et le logiciel BrewBox chargé de la surveiller. BrewBox dispose d'un nombre important d'interface afin de s'interfacer avec un maximum de capteurs :
+BrewBox hardware is mainly an electronic interface between sensors fitted in a home brewery and BrewBox software used to monitor it. BrewBox has a wide range of interfaces in order to work with maximum of sensors types :
 
-- *entrées analogiques 5-12V* pour les capteurs actifs ou passifs convertissant les grandeurs physiques en signaux électriques analogiques comme les thermistances ou les thermocouples;
-- *entrées numériques* pour les capteurs convertissant les grandeurs physiques en pulsions électriques comme les compteurs ou les boutons ;
-- entrées bus `I2C <http://en.wikipedia.org/wiki/I2C>`_ , `SPI <http://en.wikipedia.org/wiki/SPI>`_ et `1-wire <http://en.wikipedia.org/wiki/1-Wire>`_ pur les capteurs interfacés avec ces bus.
+- *5V to 12V analog inputs* for active and passive sensors converting physical quantities to analog electric signals like temperature probes or thermocouples
+- *digital inputs* for sensors converting physical quantities to electric pulses like flow transmitter, or on/off sensors like buttons or switches
+- `I2C <http://en.wikipedia.org/wiki/I2C>`_ , `SPI <http://en.wikipedia.org/wiki/SPI>`_ and `1-wire <http://en.wikipedia.org/wiki/1-Wire>`_ bus for sensors converting physical quantities to digital informations readable through theses buses.
 
-Concrètement, *l'interface matérielle de BrewBox est constituée d'une carte d'extension* connectée à un `BeagleBone Black (BBB) <http://beagleboard.org/Products/BeagleBone%20Black>`_. En plus d'un large choix d'entrée/sorties l'interface matérielle de BrewBox fournit également l'alimentation nécessaire ainsi qu'une surveillance de la carte elle-même.
+Physically, *BrewBox hardware consists of an expansion board* plugged to a `BeagleBone Black (BBB) <http://beagleboard.org/Products/BeagleBone%20Black>`_.  Additionally with a large choice of inputs, BrewBox hardware also provides power supply management and on-board monitoring for the board itself.
 
 .. image:: /static/images/arch_schema1.png
    :alt: BrewBox architecture diagram
    :align: center
 
 
+Monitoring software
+-------------------
 
-Logiciel de surveillance
-------------------------
+BrewBox software collects and converts data coming from sensors through the hardware interface. Data collected are used to monitor the brewery activity by :
 
-Le logiciel BrewBox collecte et convertit les données provenant des capteurs au travers de l'interface matérielle. Les données collectées permettent de surveiller l'activité de la pico-brasserie :
+- building real time or history graphs for physical quantities measured by sensors
+- comparing physical quantities to expected values (for example mash steps temperature)
+- triggering alerts when some value reaches some limit
+- storing data collected for afterwards analysis or brewing batches comparison.
 
-- tracés en temps réel ou en historique de graphiques des grandeurs physiques mesurées
-- comparaison des grandeurs physiques par rapport à des consignes ou des valeurs attendues (par exemple paliers de température d'empâtage)
-- déclenchement d'alertes sur dépassement de valeur d'une grandeur physique
-- enregistrement des données collectées pour analyse à froid ou comparaison des brassages successifs.
+BrewBox software is also in charge of driving the hardware interface and setting up inputs mapping to sensors.
 
-Le logiciel BrewBox est également responsable du pilotage de la carte d'interface et de la configuration matérielle.
-
-BrewBox est écrit en `Python <http://www.python.org>`_ et s'exécute sur le BeagleBone Black.
+BrewBox is written in `Python language <http://www.python.org>`_ and runs on the BeagleBone Black.
 
 .. image:: /static/images/arch_schema2.png
    :alt: BrewBox architecture diagram
    :align: center
 
-Contrôle
-========
+Control
+=======
 
-Interface matérielle
---------------------
+Hardware interface
+------------------
 
-Le contrôle et l'automatisation d'un pico-brasserie consiste à agir sur les équipements de la pico-brasserie afin de procéder aux différentes étapes du brassage comme chauffer la cuve d'ébullition ou transférer le moût. Ces actions peuvent être manuelles (actionner une vanne, allumer un bruleur, ...) ou automatisées. C'est là que BrewBox intervient : en plus des entrées précédemment décrites BrewBox fournit différents types de sorties permettant de piloter les actionneurs de la pico-brasserie :
+Home brewery controling means acting on the brewery equipments in order to go through brewing steps like heating the boil kettle or transfering the mash. The actions can be manual (switching on a pump, lighting a gaz burner, etc.) or automated. This is where BrewBox comes in : besides hardware inputs described above, BrewBox hardware provides several output types in order to drive brewery actuators :
 
-- *sorties 5-12V digitales* utilisées pour piloter les actionneurs tout ou rien comme des vannes ou des LED
-- *sorties 5-12V* avec `PWM <http://en.wikipedia.org/wiki/Pulse-width_modulation>`_. Ces sorties peuvent par exemple être utilisées pour piloter et contrôler la vitesse d'une pompe
-- *sorties 110V ou 220V alternatif* pour les actionneurs de puissance. Les pilotage est disponible en deux modes :
+- *5V to 12V digital outputs* used to drive on/off actuators like valves or LED
+- *5V to 12V DC outputs* with `Pulse Width Modulation (PWM) <http://en.wikipedia.org/wiki/Pulse-width_modulation>`_. These outputs can be used for example to drive and control pump speed
+- *110V or 220V AC* outputs for high voltage actuators. Control is available in two modes :
 
-  - `relais SSR <http://en.wikipedia.org/wiki/Solid-state_relay>`_ pour les actionneurs tout ou rien
-  - PWM pour la modulation du chauffage par exemple
+  - `solid-state relay <http://en.wikipedia.org/wiki/Solid-state_relay>`_ for on/off actuator
+  - PWM for heater power modulation for example.
 
-Logiciel
+Software
 --------
 
-Le logiciel BrewBox pilote l'interface matériel afin de contrôler l'état des actionneurs. Les consignes transmises aux sorties dépendent des actions de l'utilisateur ou de la programmation effectuée :
+BrewBox software drives the hardware interface outputs to control brewery actuators. Values or states sent to outputs can depend on user actions or programmatic setup. Brewer will be able to :
 
-- Contrôle manuel de l'état de et des consignes de sortie
-- déclenchement automatique de changement d'état en fonction d'une grandeur physique mesurée ou après un temps écoulé
-- asservissement des sorties par contrôleur `PID <http://en.wikipedia.org/wiki/PID_controller>`_ logiciel
-
+- manually control the state or value of some outputs
+- automatically trigger state change or value on physical quantity variation
+- automatically trigger state change or value on timer
+- drive outputs with a software `PID controller <http://en.wikipedia.org/wiki/PID_controller>`_.
