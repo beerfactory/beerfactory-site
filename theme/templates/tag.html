@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} | Etiquette: {{ tag.name }}{% endblock title %}
+{% block title %}{{ SITENAME }} | Blog tag: {{ tag.name }}{% endblock title %}
 
 {% block content %}
 <section role="main">
@@ -39,7 +39,7 @@
                 </p>
                 {{ article.summary }}
                 <p class="continue-reading">
-                    <a href="{{ SITEURL }}/{{ article.url }}">Plus <i class="icon-chevron-right"></i></a>
+                    <a href="{{ SITEURL }}/{{ article.url }}">Read more <i class="icon-chevron-right"></i></a>
                 </p>
                 </article>
             {% endfor %}
