@@ -7,10 +7,6 @@ body {
 /*    font-size:100%; */
 }
 
-body,h1,h2,h3,h4,h5,h6 {
-	font-family: Ubuntu,Arimo,Tahoma,Arial,sans-serif;
-}
-
 .navbar {
     margin-bottom: 0;
 }
@@ -28,10 +24,6 @@ a:hover {
 a:visited {
     color: #c79838;
     text-decoration: none;
-}
-
-p,ul {
-    font-weight: 300;
 }
 
 header {
