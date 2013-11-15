@@ -10,3 +10,5 @@ Community
 :order: 0
 
 Anyone interested in this project is welcome to contribute on the `community forum <http://forum.beerfactory.org>`_ or by looking at the project's source `repositories on Github <https://github.com/beerfactory>`_.
+
+You can also join us ``#beerfactory`` channel on `Freenode IRC <http://www.freenode.net/>`_.
