@@ -38,11 +38,11 @@ DISQUS_SITENAME='beerfactory'
 
 #Categories display name mapping
 CAT_DISPLAY_NAME_MAP = {'news': 'Project news',
-                        'nico': "Nico's stuffs",
+                        'nicohb': "Nico homebrewing",
                         'yeah': "This is a test"}
 #Categories subtitle mapping (subtitles are used in category page)
 CAT_SUBTITLE_MAP = {'news': 'General news about the project',
-                        'nico': "Personal stuffs from the project owner",
+                        'nicohb': "Personal blog from the project owner about computer and beer.",
                         'yeah': "This is a test"}
 SITEMAP = {
     'format': 'xml',
