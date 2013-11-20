@@ -1,7 +1,7 @@
 Integrating Yuml in Sphinx documentation
 ########################################
 
-:date: 2013-08-25 22:22
+:date: 2013-11-20 17:11
 :tags: python, BrewBox
 :author: Nico
 :summary: This blog entry is about an sphinx extension I wrote to embed Yuml UML diagrams in Sphinx documentation.
