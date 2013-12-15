@@ -4,8 +4,10 @@ Fabrication d'une pico-brasserie - Episode 1
 :date: 2013-12-12 22:12
 :tags: pico
 :author: Nico
-:summary: Démarrage d'une série de post sur la création d'une pico-brasserie
+:summary: Démarrage d'une série d'articles sur la création d'une pico-brasserie
 
-Je me lance dans la fabrication d'une pico-brasserie et histoire d'en faire profiter tout ceux que ce genre d'activité intéresse, je vais partager mes travaux et mon expérience au travers de cette série de posts.
+Brasseur amateur depuis quelque temps, je souhaite passer à la vitesse supérieure en construisant une pico-brasserie qui me permette de
 
-Pour ce premier article 
+Je me lance dans la construction d'une pico-brasserie. Ce post inaugure donc une série d'articles sur la fabrication d'une pico-brasserie. L'objectif est de partager mon expérience et mes travaux depuis la conception jusqu'à la mise en route. 
+
+Pour ce premier article je présenterai rapidement le cahier des charges et les contraintes que devra respecter la construction finale.
