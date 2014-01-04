@@ -62,7 +62,7 @@
             {% endfor %}
         {% endif %}
         <li class="dropdown .navbar-inverse">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fonctionnalités <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
             {% for p in pages|sort(attribute="order") %}
                 {% if "features" in p.section %}
@@ -71,14 +71,9 @@
             {% endfor %}
             </ul>
         </li>
-        <li class="dropdown .navbar-inverse">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-            <ul class="dropdown-menu" role="menu">
-            {% for cat,articles in categories %}
-                <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.display_name }}</a></li>
-            {% endfor %}
-            </ul>
-        </li>
+        {% for cat,articles in categories %}
+            <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.display_name }}</a></li>li>
+        {% endfor %}
         {% if DISPLAY_PAGES_ON_MENU %}
             {% for page in PAGES %}
                 {% if "topbar-last" in page.section %}

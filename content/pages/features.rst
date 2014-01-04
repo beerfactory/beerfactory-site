@@ -1,13 +1,13 @@
-Features
-########
+Fonctionnalités
+###############
 
 :date: 2013-09-01 22:43
 :author: Nico
-:summary: Projects features
+:summary: Fonctionnalités du projet
 :icon: icon-signal
 :order: 1
 
-See the following pages for features details:
+Reportez vous aux page suivantes pour les fonctionnalités détaillées :
 
- * `BrewBox <|filename|/pages/features/brewbox-features.rst>`_ : software and hardware for *monitoring and controlling* the beer production process.
- * `BrewManager <|filename|/pages/features/brewbox-features.rst>`_ : a lightweight ERP specialised in home brewing management.
+ * `BrewBox <|filename|/pages/features/brewbox-features.rst>`_ : logiciel et matériel de *surveillance et contr$ole* du processus de production de bière.
+ * `BrewManager <|filename|/pages/features/brewbox-features.rst>`_ : un ERP léger spécialisé dans le brassage amateur.

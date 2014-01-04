@@ -1,4 +1,4 @@
-Managing
+Gérer
 ########
 
 :date: 2013-08-20 22:43
@@ -7,5 +7,4 @@ Managing
 :icon: icon-money
 :order: 3
 
-`BrewManager <|filename|/pages/features/brewbox-features.rst>`_ helps you to manage your brewery activity, just like a professional !
-
+`BrewManager <|filename|/pages/features/brewbox-features.rst>`_ vous aide à gérer votre activité de brasseur, comme un pro !

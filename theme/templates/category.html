@@ -45,14 +45,14 @@
                 </p>
                 {{ article.summary }}
                 <p class="continue-reading">
-                    <a href="{{ SITEURL }}/{{ article.url }}">Read more <i class="icon-chevron-right"></i></a>
+                    <a href="{{ SITEURL }}/{{ article.url }}">Plus <i class="icon-chevron-right"></i></a>
                 </p>
                 </article>
             {% endfor %}
         </div>
         <aside class="col-md-3 col-md-offset-1 columns">
             {% include "recents.html" %}
-            <h3>Tags</h3>
+            <h3>Etiquettes</h3>
             {% include "tagcloud.html" %}
         </aside>
     </div>
