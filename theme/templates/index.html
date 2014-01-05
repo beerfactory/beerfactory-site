@@ -5,67 +5,29 @@
 {% block content %}
 <section role="main">
     <header class="hidden-sm" id="index">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center"><i class="icon-beer icon-2x"></i>
-                    &nbsp;{{ SITENAME }}</h1>
-                <h2 class="text-center">Brasser comme un pro !</h2>
-            </div>
+        <div class="container" class="header">
+            <h1><i class="icon-beer icon-2x"></i>
+                &nbsp;{{ SITENAME }}</h1>
+            <p>Blog et projets autour de la bière, l'informatique et l'électronique</p>
         </div>
     </header>
 </section>
 
-{% include "social.html" %}
-
 <section class="container" id="mainContent">
-    <div class="row hidden-lg hidden-md">
-        <div class="col-sm-12">
-            <h1 class="text-center">
-                <i class="icon-beer"></i>
-                    &nbsp;{{ SITENAME }}
-            </h1>
-            <h2 class="text-center">Brasser comme un pro !</h2>
-        </div>
+    {% for article in articles_page.object_list %}
+    <div class="page-header">
+        <h1>{{ article.title }}</h1>
     </div>
-    <div class="row">
-        <div class="col-md-8 text-justify">
-            <div class="row">
-                <div class="col-md-12 summary text-justify">
-                    <p>Logiciels et matériels open-source pour l'activité de brassage amateur.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    &nbsp;
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-justify">
-                    {% for page in PAGES|sort(attribute="order") %}
-                        {% if "index" in page.section %}
-                            <h4>
-                                {% if page.icon is defined %}
-                                    <i class="{{ page.icon }} icon-large"></i>&nbsp;
-                                {% endif %}
-                                {{ page.title }}
-                            </h4>
-                            {{ page.content }}
-                        {% endif %}
-                    {% endfor %}
-                    <hr/>
-                    <div class="text-center">
-                        <a href="{{ SITEURL }}/pages/getting-started.html" class="btn btn-lg btn-beer">Commencer&nbsp;<i class="icon-circle-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <aside class="col-md-3 col-md-offset-1">
-            {% include "news.html" %}
-        </aside>
-        <div class="col-md-3 col-md-offset-1">
-            {% include "google-ad.html" %}
-        </div>
-    </div>
+    <p> {{ article.summary }}</p>
+    <a href="{{ SITEURL }}/{{ article.url }}">Plus &rarr;</a>
+
+    {% if article.tags %}
+        <p class="tags"><span>Etiquettes:&nbsp;</span>
+        {% for tag in article.tags %}
+        <span class="label label-default"><a class="label" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+        {% endfor %}</p>
+    {% endif %}
+    {% endfor %}
 </section>
 
 {% endblock %}

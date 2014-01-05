@@ -6,52 +6,24 @@
 <section role="main">
     <header class="hidden-sm" id="brand">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>
-                    {% if page.icon is defined %}
-                    <i class="{{ page.icon }} icon-large"></i>&nbsp;
-                    {% endif %}
-                    {{ page.title }}
-                </h1>
-                <h4>{{ page.subtitle }}</h4>
-                </div>
-            </div>
+            <h1>
+            {% if page.icon is defined %}
+            <i class="{{ page.icon }} icon-large"></i>&nbsp;
+            {% endif %}
+            {{ page.title }}
+            </h1>
+            <h4>{{ page.subtitle }}</h4>
         </div>
     </header>
 </section>
 
-{% include "social.html" %}
-
 <section class="container" id="mainContent">
-    <div class="row hidden-lg hidden-md">
-        <div class="col-sm-12">
-            <h1>
-                {% if page.icon is defined %}
-                <i class="{{ page.icon }} icon-large"></i>&nbsp;
-                {% endif %}
-                {{ page.title }}
-            </h1>
-            <h6>{{ page.subtitle }}</h6>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 text-justify">
-            <div class="row">
-                <div class="col-md-12 summary text-justify">
-                    {{ page.summary }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-justify">
-                    {{ page.content }}
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-md-offset-1">
-            {% include "google-ad.html" %}
-        </div>
-    </div>
+    <h1>
+        {{ page.title }}
+    </h1>
+    <h5>{{ page.subtitle }}</h5>
+
+    {{ page.content }}
 </section>
 
 {% endblock %}

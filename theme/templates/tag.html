@@ -6,29 +6,16 @@
 <section role="main">
     <header class="hidden-sm" id="brand">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>
-                    <i class="icon-tag icon-large"></i>
-                    &nbsp;{{ tag.name }}
-                    </h1>
-                </div>
-            </div>
+            <h1>
+            <i class="icon-tag icon-large"></i>
+            &nbsp;{{ tag.name }}
+            </h1>
         </div>
     </header>
 </section>
 
-{% include "social.html" %}
 
 <section class="container" id="mainContent">
-    <div class="row hidden-lg hidden-md">
-        <div class="col-sd-12">
-            <h1>
-                <i class="icon-tag icon-large"></i>
-                    &nbsp;{{ tag.name }}
-            </h1>
-        </div>
-    </div>
     <div class="row">
         <div class="col-md-8 text-justify entry">
             {% for article in (articles_page.object_list if articles_page else articles) %}
