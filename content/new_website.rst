@@ -4,7 +4,6 @@ Nouveau site disponible
 :date: 2013-08-25 22:22
 :tags: general
 :author: Nico
-:summary: Nouvelle version du site Web du projet réalisée avec Pelican et Bootstrap.
 
 Bienvenue sur ce nouveau site. Vous y trouverez toutes les informations concernant le projet Beerfactory.
 

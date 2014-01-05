@@ -3,7 +3,7 @@ A propos
 
 :date: 2013-08-25 11:47
 :author: Nico
-:section: footer
+:section: topbar-last
 :summary: Informations générales sur le projet
 :keywords: open-source, homebrewing, DIY
 :icon: icon-question-sign

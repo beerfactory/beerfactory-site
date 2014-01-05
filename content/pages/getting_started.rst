@@ -3,7 +3,6 @@ Commencer
 
 :date: 2013-08-25 11:47
 :author: Nico
-:section: topbar-first
 :summary: Beerfactory fournit des logiciels et des matériels libres pour gérer une activité de brassage amateur
 :icon: icon-play-sign
 :keywords: BrewBox, BrewManager, monitoring, controling, automation, DIY, ERP, home brewing
