@@ -31,7 +31,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 THEME="theme"
-PLUGINS = ["cat_display_name","sitemap",]
+PLUGINS = ["sitemap",]
 
 DEFAULT_PAGINATION=5
 DISQUS_SITENAME='beerfactory'
@@ -60,3 +60,5 @@ SITEMAP = {
 
 GOOGLE_ANALYTICS="UA-37658015-2"
 MENUITEMS= (('Wiki', 'http://wiki.beerfactory.org/'),)
+
+USE_FOLDER_AS_CATEGORY=False
