@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ SITENAME }} | {{ category.display_name }}{% endblock title %}
+{% block title %}{{ SITENAME }} | {{ category.name }}{% endblock title %}
 
 {% block content %}
 <section role="main">
@@ -22,41 +22,37 @@
 </section>
 
 <section class="container" id="mainContent">
-    <div class="row hidden-lg hidden-md">
-        <div class="col-sm-12">
-            <h1>
-                <i class="icon-folder-open icon-large"></i>
-                    &nbsp;{{ category.name }}
-            </h1>
-            {% if category.subtitle is defined %}
-                <h6>{{ category.subtitle }}</h6>
-            {% endif %}
-        </div>
-    </div>
     <div class="row">
-        <div class="col-md-8 text-justify entry">
+        <div class="col-md-9">
             {% for article in (articles_page.object_list if articles_page else articles) %}
                 <article>
-                <h4 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
-                <p class="entry-info">
-                    {{ article.date.strftime('%c') }}
-                </p>
+                <div class="page-header">
+                    <h1>{{ article.title }}</h1>
+                    <p class="entry-info">
+                        {{ article.date.strftime('%d %B %Y') }}
+                    </p>
+                </div>
                 {{ article.summary }}
-                <p class="continue-reading">
-                    <a href="{{ SITEURL }}/{{ article.url }}">Plus <i class="icon-chevron-right"></i></a>
-                </p>
+                <a href="{{ SITEURL }}/{{ article.url }}">Plus &rarr;</a>
+
+                {% if article.tags %}
+                    <p class="tags"><span>Etiquettes:&nbsp;</span>
+                    {% for tag in article.tags %}
+                    <span class="label label-default"><a class="label" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+                    {% endfor %}</p>
+                {% endif %}
                 </article>
             {% endfor %}
         </div>
-        <aside class="col-md-3 col-md-offset-1 columns">
+        <aside class="col-md-3 page-header">
             {% include "recents.html" %}
-            <h3>Etiquettes</h3>
+            {% include "category_list.html" %}
             {% include "tagcloud.html" %}
         </aside>
     </div>
     {% if articles_page and articles_paginator.num_pages > 1 %}
         <div class="row">
-            <div class="col-md-8 columns text-justify">
+            <div class="col-md-9">
                 <div class="centered">
                     <ul class="pagination">
                         {% if articles_page.has_previous() %}
