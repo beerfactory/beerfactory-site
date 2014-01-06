@@ -1,0 +1,8 @@
+{% if categories %}
+    <h4>Catégories</h4>
+    <ul>
+        {% for (c,a) in categories %}
+            <li><a href="{{ SITEURL }}/{{ c.url }}">{{ c.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}

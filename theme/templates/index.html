@@ -14,20 +14,37 @@
 </section>
 
 <section class="container" id="mainContent">
-    {% for article in articles_page.object_list %}
-    <div class="page-header">
-        <h1>{{ article.title }}</h1>
-    </div>
-    <p> {{ article.summary }}</p>
-    <a href="{{ SITEURL }}/{{ article.url }}">Plus &rarr;</a>
+    <div class="row">
+        <div class="col-md-9">
+            {% for article in articles_page.object_list %}
+            <div class="page-header">
+                <h1>{{ article.title }}</h1>
+                <p class="entry-info">
+                    {{ article.date.strftime('%d %B %Y') }}
+                </p>
+            </div>
+            {{ article.summary }}
+            <a href="{{ SITEURL }}/{{ article.url }}">Plus &rarr;</a>
 
-    {% if article.tags %}
-        <p class="tags"><span>Etiquettes:&nbsp;</span>
-        {% for tag in article.tags %}
-        <span class="label label-default"><a class="label" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
-        {% endfor %}</p>
-    {% endif %}
-    {% endfor %}
+            {% if article.tags %}
+                <p class="tags"><span>Etiquettes:&nbsp;</span>
+                {% for tag in article.tags %}
+                <span class="label label-default"><a class="label" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+                {% endfor %}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-md-3 page-header">
+            {% include "recents.html" %}
+            {% include "category_list.html" %}
+            {% include "tagcloud.html" %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 page-header">
+            <a href="{{ SITEURL }}/archives.html">&larr;&nbsp;Articles plus anciens</a>
+        </div>
+    </div>
 </section>
 
 {% endblock %}

@@ -1,5 +1,6 @@
 {% if tag_cloud %}
+    <h4>Etiquettes</h4>
     {% for tag in tag_cloud %}
-        <span class="tag-{{ tag.1 }}"><a href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></span>&nbsp;
+        <span class="label label-default tag-{{ tag.1 }}"><a class="label" href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></span>
 {% endfor %}
 {% endif %}
