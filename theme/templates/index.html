@@ -13,7 +13,7 @@
     </header>
 </section>
 
-<section class="container" id="mainContent">
+<section class="container">
     <div class="row">
         <div class="col-md-9">
             {% for article in articles_page.object_list %}
@@ -34,14 +34,14 @@
             {% endif %}
             {% endfor %}
         </div>
-        <aside class="col-md-3 page-header">
+        <aside class="col-md-3 a-header">
             {% include "recents.html" %}
             {% include "category_list.html" %}
             {% include "tagcloud.html" %}
         </aside>
     </div>
     <div class="row">
-        <div class="col-md-12 page-header">
+        <div class="col-md-12 a-header">
             <a href="{{ SITEURL }}/archives.html">&larr;&nbsp;Articles plus anciens</a>
         </div>
     </div>

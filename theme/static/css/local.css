@@ -67,14 +67,6 @@ header {
     margin-bottom: 0;
 }
 
-#mainContent {
-    margin-top: 44px;
-    margin-bottom: 22px;
-    padding-bottom: 22px;
-    border-bottom: 1px solid #eee;
-    overflow: hidden;
-}
-
 .summary p{
     font-size:150%;
 }
@@ -244,3 +236,8 @@ footer {
     line-height: 1;
     padding: 5px 8px;
 } 
+
+.a-header {
+    padding-bottom: 9px;
+    margin: 40px 0px 20px;
+}

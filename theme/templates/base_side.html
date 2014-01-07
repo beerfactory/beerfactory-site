@@ -38,7 +38,7 @@
                 </article>
             {% endfor %}
         </div>
-        <aside class="col-md-3 page-header">
+        <aside class="col-md-3 a-header">
             {% block side_content %}
                 {% include "recents.html" %}
                 {% include "category_list.html" %}
@@ -46,7 +46,6 @@
             {% endblock side_content %}
         </aside>
     </div>
-    {%block ext_content %}{% endblock ext_content %}
 </section>
 
 {% endblock %}
