@@ -159,6 +159,7 @@ class SitemapGenerator(object):
         pages = self.context['pages'] + self.context['articles'] \
                 + [ c for (c, a) in self.context['categories']] \
                 + [ t for (t, a) in self.context['tags']] # \
+#NJO
 #                + [ a for (a, b) in self.context['authors']]
 
         for article in self.context['articles']:
@@ -179,8 +180,9 @@ class SitemapGenerator(object):
                                                'url'])
 
             for standard_page_url in ['index.html',
-                                      'archives.html',
-                                      'tags.html',]:
+                                      'archives.html']:
+#NJO
+#                                      'tags.html',]:
 #                                      'categories.html']:
                 fake = FakePage(status='published',
                                 date=self.now,
