@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} | {{ category.name }}{% endblock title %}
+
+{% block content %}
+<section role="main">
+    <header class="hidden-sm" id="brand">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% block title_content %}{% endblock title_content %}
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+
+<section class="container" id="mainContent">
+    <div class="row">
+        <div class="col-md-9">
+            {% for article in (articles_page.object_list if articles_page else articles) %}
+                <article>
+                <div class="page-header">
+                    <h1>{{ article.title }}</h1>
+                    <p class="entry-info">
+                        {{ article.date.strftime('%d %B %Y') }}
+                    </p>
+                </div>
+                {{ article.summary }}
+                <a href="{{ SITEURL }}/{{ article.url }}">Plus &rarr;</a>
+
+                {% if article.tags %}
+                    <p class="tags"><span>Etiquettes:&nbsp;</span>
+                    {% for tag in article.tags %}
+                    <span class="label label-default"><a class="label" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+                    {% endfor %}</p>
+                {% endif %}
+                </article>
+            {% endfor %}
+        </div>
+        <aside class="col-md-3 page-header">
+            {% block side_content %}
+                {% include "recents.html" %}
+                {% include "category_list.html" %}
+                {% include "tagcloud.html" %}
+            {% endblock side_content %}
+        </aside>
+    </div>
+    {%block ext_content %}{% endblock ext_content %}
+</section>
+
+{% endblock %}
