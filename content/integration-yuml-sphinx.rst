@@ -11,11 +11,11 @@ Yuml_ est un outil de génération de diagrammes UML en ligne. Il offre une API 
 
 L'envoi à l'API Yuml_ de ce texte renvoie une image contenant le diagramme de classe suivant :
 
-.. image:: /static/images/diagram1.png
+.. image:: /images/diagram1.png
    :alt: Exemple de diagramme de classes UML
    :align: center
 
-Pour aller plus loin avec Yuml_ je me suis lancé comme défit de pouvoir intégrer l'API Yuml_ dans le générateur de documentation Sphinx_. L'objectif de pouvoir intégrer des descriptions Yuml_ directement dans des documents au format `restructured <https://github.com/beerfactory/brewbox-doc>`_ et d'utiliser le `mécanisme d'extension <http://sphinx-doc.org/extensions.html>` de Sphinx_ pour générer les diagrammes UML à la volée.
+Pour aller plus loin avec Yuml_ je me suis lancé comme défit de pouvoir intégrer l'API Yuml_ dans le générateur de documentation Sphinx_. L'objectif de pouvoir intégrer des descriptions Yuml_ directement dans des documents au format `restructured <https://github.com/beerfactory/brewbox-doc>`_ et d'utiliser le `mécanisme d'extension <http://sphinx-doc.org/extensions.html>`_ de Sphinx_ pour générer les diagrammes UML à la volée.
 
 Pour cela, je me suis inspiré d'une extension existante pour `Gnuplot <https://bitbucket.org/birkenfeld/sphinx-contrib/src/dc99bd08ef54d09be5be8bf6f7692a7fa310778c/gnuplot/?at=default>`_. Cette nouvelle extensio ne nomme ``sphinxcontrib-yuml``. Elle définit une nouvelle directive ``yuml::`` qui fonctionne comme la directive ``image::`` à la différence qu'aucun fichier source n'est nécessaire. L'image est générée lors de la compilation de la documentation, par appel de l'API Yuml_ *à la volée*.
 
