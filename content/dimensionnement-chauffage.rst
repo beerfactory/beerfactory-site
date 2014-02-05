@@ -2,7 +2,7 @@ Dimensionnement des éléments de chauffage
 ##########################################
 
 :date: 2014-02-05 16:15
-:tags: pico, électricité, mathplotlib, puissance, 
+:tags: pico, électricité, mathplotlib, puissance, thermique
 :author: Nico
 :category: Pico
 
@@ -103,7 +103,7 @@ avec :
 
 Cette relation est tracée sur le diagramme suivant pour des volumes d'eau de 20l, 50l, 70l et 100l. En se basant sur un rythme de montée en température de :math:`1^\circ c` par minute, ce diagramme met également en évidence les puissances de chauffe nécessaire.
 
-.. image:: /images/temps_fct_puissance.png
+.. image:: /images/temp_fct_puissance.png
    :alt: Temps nécessaire pour élever la température d'une masse d'eau de 1°C en fonction de la puissance de chauffe
    :align: center
 
