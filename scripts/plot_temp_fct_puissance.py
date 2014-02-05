@@ -1,9 +1,12 @@
+# -*- coding: utf8 -*-
 import numpy as np
 import matplotlib.pyplot as plt
 
 
 r = np.arange(1000.0, 8100.0, 100.0)
+
 def f(m,t):
+	'''Temps nécessaire pour élever la température d''une masse d''eau m de 1°C en fonction de la puissance de chauffe'''
 	return ((m*1000.0*4.185)/t)/60.
 
 plt.plot(r, f(20,r), 'b', label='20 l')
@@ -35,5 +38,5 @@ plt.annotate('6975W', xy=(6975., 1.0), xytext=(7175., 1.5),
 plt.xlabel('Puissance (W)')
 plt.ylabel('Temps (min)')
 plt.legend()
-plt.show()
-#plt.savefig("graph.png")
+#plt.show()
+plt.savefig("../content/images/temp_fct_puissance.png")
