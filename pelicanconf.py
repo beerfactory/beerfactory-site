@@ -64,3 +64,4 @@ USE_FOLDER_AS_CATEGORY=False
 AUTHOR_SAVE_AS=False
 AUTHORS_SAVE_AS=False
 TAGS_SAVE_AS=False
+DOCUTILS_SETTINGS = {'math_output': 'mathjax'}
