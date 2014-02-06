@@ -6,11 +6,11 @@ Prise en main de matplotlib
 :author: Nico
 :category: Python
 
-Pour le `dimensionnement des éléments de chauffage <{filename/dimensionnement-chauffage.rst}>`_, j'ai été amené à utiliser `matplotlib`_ pour tracer et analyser la relation existante puissance et temps de chauffage.
+Pour le `dimensionnement des éléments de chauffage <{filename}/dimensionnement-chauffage.rst>`_, j'ai été amené à utiliser `matplotlib`_ pour tracer et analyser la relation existante puissance et temps de chauffage.
 
 En deux mots, `matplotlib`_ est une librairie Python qui permet d'effectuer des tracés et des graphiques en 2D. La `documentation <http://matplotlib.org/contents.html>`_ est riche et offre un `tutorial <http://matplotlib.org/users/pyplot_tutorial.html>`_ qui permet de rentrer rapidement dans le vif du sujet.
 
-Voici le graphique réalisé avec `matplotlib`_ et présent dans l'article sur le `dimensionnement des éléments de chauffage <{filename/dimensionnement-chauffage.rst}>`_
+Voici le graphique réalisé avec `matplotlib`_ et présent dans l'article sur le `dimensionnement des éléments de chauffage <{filename}/dimensionnement-chauffage.rst>`_
 
 .. image:: /images/temp_fct_puissance.png
    :alt: Graphique matplotlib
