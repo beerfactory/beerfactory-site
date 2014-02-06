@@ -1,0 +1,40 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+Disallow: /wiki/bin/attach/
+Disallow: /wiki/bin/cancel/
+Disallow: /wiki/bin/commentadd/
+Disallow: /wiki/bin/delattachment/
+Disallow: /wiki/bin/delete/
+Disallow: /wiki/bin/dot/
+Disallow: /wiki/bin/download/
+Disallow: /wiki/bin/downloadrev/
+Disallow: /wiki/bin/edit/
+Disallow: /wiki/bin/export/
+Disallow: /wiki/bin/get/
+Disallow: /wiki/bin/inline/
+Disallow: /wiki/bin/lifeblog/
+Disallow: /wiki/bin/login/
+Disallow: /wiki/bin/loginerror/
+Disallow: /wiki/bin/logout/
+Disallow: /wiki/bin/objectremove/
+Disallow: /wiki/bin/pdf/
+Disallow: /wiki/bin/preview/
+Disallow: /wiki/bin/propadd/
+Disallow: /wiki/bin/propdelete/
+Disallow: /wiki/bin/propupdate/
+Disallow: /wiki/bin/register/
+Disallow: /wiki/bin/save/
+Disallow: /wiki/bin/skin/
+Disallow: /wiki/bin/status/
+Disallow: /wiki/bin/upload/
+Disallow: /wiki/bin/viewattachrev/
+Disallow: /wiki/bin/viewrev/
+Disallow: /wiki/bin/xmlrpc/
+# It could be also usefull to block certain spaces from crawling,
+# especially if this spaces doesn't provide new content
+Disallow: /wiki/bin/view/Main/
+Disallow: /wiki/bin/view/XWiki/
+# on the other hand you would like to have your recent (public) changes included
+Allow: /wiki/bin/view/Main/Dashboard
