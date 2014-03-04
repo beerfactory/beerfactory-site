@@ -15,12 +15,16 @@
 
 <section class="container">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-sm-8">
             {% for article in articles_page.object_list %}
-            <div class="page-header">
-                <h1>{{ article.title }}</h1>
+            <article class="hentry">
+            <div class="entry-header">
+                <h2 class="entry-title"><a href="{{ article.url }}" title="{{ article.title }}" rel="bookmark">{{ article.title }}</a></h2>
                 <p class="entry-info">
-                    {{ article.date.strftime('%d %B %Y') }}
+                    Ecrit par <span class="vcard author">
+                        <a href="{{ article.author.url }}" class="fn url nickname" rel="author"
+                            title="Voir tous les articles de {{ article.author }}">{{ article.author }}</a></span>
+                    le {{ article.date.strftime('%d %B %Y') }}
                 </p>
             </div>
             {{ article.summary }}
@@ -32,9 +36,10 @@
                 <span class="label label-default"><a class="label" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
                 {% endfor %}</p>
             {% endif %}
+            </article>
             {% endfor %}
         </div>
-        <aside class="col-md-3 a-header">
+        <aside class="col-sm-3 col-sm-offset-1">
             {% include "recents.html" %}
             {% include "category_list.html" %}
             {% include "tagcloud.html" %}
