@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block meta_keywords %}{{ super() }}, {{ page.keywords }}{% endblock meta_keywords %}
+{% block meta_description_page %}{{ page.description }}{% endblock meta_description_page %}
 {% block title %}{{ SITENAME }} | {{ page.title }}{% endblock title %}
 
 {% block content %}
