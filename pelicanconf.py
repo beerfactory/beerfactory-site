@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Nico'
 SITENAME = 'Beerfactory'
-SITEURL = ''
+SITEURL = 'http://localhost:8000'
 
 TIMEZONE = 'Europe/Paris'
 
@@ -68,3 +68,9 @@ DOCUTILS_SETTINGS = {'math_output': 'mathjax'}
 STATIC_PATHS = [
     'robots.txt', 'images'
     ]
+
+DATE_FORMATS = {
+    'fr': '%d %B %Y',
+}
+
+DEFAULT_DATE_FORMAT = DATE_FORMATS['fr']

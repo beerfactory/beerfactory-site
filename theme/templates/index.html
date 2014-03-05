@@ -13,29 +13,52 @@
     </header>
 </section>
 
+{% include "social.html" %}
+
 <section class="container">
     <div class="row">
         <div class="col-sm-8">
             {% for article in articles_page.object_list %}
             <article class="hentry">
             <div class="entry-header">
-                <h2 class="entry-title"><a href="{{ article.url }}" title="{{ article.title }}" rel="bookmark">{{ article.title }}</a></h2>
+                <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}" rel="bookmark">{{ article.title }}</a></h2>
                 <p class="entry-info">
                     Ecrit par <span class="vcard author">
                         <a href="{{ article.author.url }}" class="fn url nickname" rel="author"
                             title="Voir tous les articles de {{ article.author }}">{{ article.author }}</a></span>
-                    le {{ article.date.strftime('%d %B %Y') }}
+                    le {{ article.locale_date }}
+                    {% if article.category %}
+                        dans <a href="{{ SITEURL }}/{{ article.category.url }}" title="Tous les articles de {{ article.category }}" rel="tag category">{{ article.category }}</a>
+                    {% endif %}
+                    |&nbsp;<i class="fa fa-comments">&nbsp;</i><a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"
+         title="Laisser un commentaire sur {{ article.title }}"></a>
                 </p>
             </div>
-            {{ article.summary }}
-            <a href="{{ SITEURL }}/{{ article.url }}">Plus &rarr;</a>
+            <div class="entry-body">
+                <div class="entry-content">
+                {{ article.summary }}
+                </div>
+                <p class="continue-reading">
+                      <a href="{{ SITEURL }}/{{ article.url }}" title="Continuer la lecture de {{ object }}" rel="bookmark">Continuer la lecture</a>
+                </p>
+            </div>
 
-            {% if article.tags %}
-                <p class="tags"><span>Etiquettes:&nbsp;</span>
-                {% for tag in article.tags %}
-                <span class="label label-default"><a class="label" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
-                {% endfor %}</p>
-            {% endif %}
+              <div class="entry-footer">
+                <p class="entry-tags">
+                  <i class="fa fa-tag">&nbsp;</i><strong>Tags</strong> :
+                    {% for tag in article.tags %}
+                      <a href="{{ SITEURL }}/{{ tag.url }}" title="Voir tous les articles marqués par {{ tag }}" rel="tag">{{ tag }}</a>{% if not loop.last %}&nbsp;{% endif %}
+                    {% endfor %}</p>
+                </p>
+                {% if article.short_url %}
+                <p class="entry-shorturl">
+                  <i class="fa fa-link">&nbsp;</i><strong>URL raccourcie</strong> :
+                  <a href="{{ SITEURL }}/{{ article.short_url }}" title="URL raccourcie vers {{ article }}" rel="shortlink">{{ object.short_url }}</a>
+                </p>
+                {% endif %}
+                <p class="entry-discussions">
+                </p>
+              </div>
             </article>
             {% endfor %}
         </div>
@@ -53,3 +76,8 @@
 </section>
 
 {% endblock %}
+
+{% block js %}
+{{ super() }}
+    {% include "disqus.html" %}
+{% endblock js %}

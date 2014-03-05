@@ -99,9 +99,11 @@
 
     {% include "analytics.html" %}
 
+    {% block js %}
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="{{ SITEURL }}/theme/js/vendor/jquery.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+    {% endblock js %}
 </body>
 </html>
