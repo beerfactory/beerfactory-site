@@ -166,28 +166,20 @@ footer {
     border-left: 3px solid #EEE;
 }
 
-a.tag-1 {
+a.tag-4 {
     font-size:90%;
 }
 
-a.tag-2 {
+a.tag-3 {
     font-size:100%;
 }
 
-a.tag-3 {
+a.tag-2 {
     font-size:110%;
 }
 
-a.tag-4 {
+a.tag-1 {
     font-size:120%;
-}
-
-a.tag-5 {
-    font-size:130%;
-}
-
-a.tag-6 {
-    font-size:140%;
 }
 
 #social-buttons {

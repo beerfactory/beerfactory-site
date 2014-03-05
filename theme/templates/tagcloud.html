@@ -1,6 +1,6 @@
 {% if tag_cloud %}
-    <h4>Etiquettes</h4>
-    {% for tag in tag_cloud %}
-        <span class="label label-default tag-{{ tag.1 }}"><a class="label" href="{{ SITEURL }}/{{ tag.0.url }}">{{ tag.0 }}</a></span>
-{% endfor %}
+    <h3>Tags</h3>
+        {% for tag in tag_cloud %}
+    		<a href="{{ SITEURL }}/{{ tag.0.url }}" title="Articles marqués par {{ tag.0 }}" class="tag-{{ tag.1 }}">{{ tag.0 }}</a>{% if not loop.last %}&nbsp;{% endif %}
+        {% endfor %}</p>
 {% endif %}
