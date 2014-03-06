@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Nico'
 SITENAME = 'Beerfactory'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'http://www.beerfactory.org'
 
 TIMEZONE = 'Europe/Paris'
 
@@ -59,7 +59,7 @@ SITEMAP = {
 }
 
 GOOGLE_ANALYTICS="UA-37658015-2"
-MENUITEMS= (('Wiki', 'http://www.beerfactory.org/wiki'),)
+MENUITEMS= ()
 USE_FOLDER_AS_CATEGORY=False
 AUTHORS_SAVE_AS=False
 TAGS_SAVE_AS=False
