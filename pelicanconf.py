@@ -61,7 +61,6 @@ SITEMAP = {
 GOOGLE_ANALYTICS="UA-37658015-2"
 MENUITEMS= (('Wiki', 'http://www.beerfactory.org/wiki'),)
 USE_FOLDER_AS_CATEGORY=False
-AUTHOR_SAVE_AS=False
 AUTHORS_SAVE_AS=False
 TAGS_SAVE_AS=False
 DOCUTILS_SETTINGS = {'math_output': 'mathjax'}
