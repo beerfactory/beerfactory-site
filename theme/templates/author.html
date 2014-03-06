@@ -1,10 +1,10 @@
 {% extends "base_side.html" %}
 
-{% block meta_keywords %}{{ super() }}, Catégorie {{ category.name }}{% endblock meta_keywords %}
-{% block meta_description_page %}Articles de la catégorie {{ category.name }}{% endblock meta_description_page %}
-{% block title %}Catégorie {{ category.name }}{% endblock title %}
-{% block page_icon %}fa-folder-open-o{% endblock page_icon %}
-{% block page_title %}Catégorie {{ category.name }}{% endblock page_title %}
+{% block meta_keywords %}{{ super() }}, Auteur {{ author.name }}{% endblock meta_keywords %}
+{% block meta_description_page %}Articles de l'auteur {{ author.name }}{% endblock meta_description_page %}
+{% block title %}Auteur {{ author.name }}{% endblock title %}
+{% block page_icon %}fa-user{% endblock page_icon %}
+{% block page_title %}Auteur {{ author.name }}{% endblock page_title %}
 
 {% block page_main_content %}
 {% for article in (articles_page.object_list if articles_page else articles) %}
