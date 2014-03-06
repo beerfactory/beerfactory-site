@@ -1,31 +1,37 @@
 {% extends "base.html" %}
 
-{% block meta_keywords %}{{ super() }}, {{ page.keywords }}{% endblock meta_keywords %}
-{% block meta_description_page %}{{ page.description }}{% endblock meta_description_page %}
-{% block title %}{{ SITENAME }} | {{ page.title }}{% endblock title %}
+{% block meta_keywords %}{{ super() }}, {{ page.title }}{% endblock meta_keywords %}
+{% block meta_description_page %}{{ page.title }}{% endblock meta_description_page %}
+{% block title %}{{ page.title }}{% endblock title %}
 
 {% block content %}
 <section role="main">
-    <header class="hidden-sm" id="brand">
+    <header class="hidden-sm" id="index">
         <div class="container">
-            <h1>
-            {% if page.icon is defined %}
-            <i class="{{ page.icon }} icon-large"></i>&nbsp;
-            {% endif %}
-            {{ page.title }}
-            </h1>
-            <h4>{{ page.subtitle }}</h4>
+            <h1><i class="fa {% block page_icon %}{% if page.icon is defined %}{{ page.icon }}{% else %}fa-file-text-o{% endif %}{% endblock page_icon %}"></i>
+                &nbsp;{% block page_title %}{{ page.title }}{% endblock page_title %}</h1>
         </div>
     </header>
 </section>
 
-<section class="container" id="mainContent">
-    <h1>
-        {{ page.title }}
-    </h1>
-    <h5>{{ page.subtitle }}</h5>
+{% include "social.html" %}
 
-    {{ page.content }}
+<section class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="container">
+                <div class="row">
+                    <div class="col-sm-12 a-header">
+                        {% block page_content %}{{ page.content }}{% endblock page_content %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 a-header">
+                        {% block page_footer_content %}{% endblock page_footer_content %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 </section>
-
 {% endblock %}
