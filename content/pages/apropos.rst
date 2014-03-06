@@ -6,7 +6,7 @@ A propos
 :section: topbar-last
 :summary: Informations générales sur le site
 :keywords: brassage amateur, a propos, blog, programmation
-:icon: icon-question-sign
+:icon: fa-question-circle
 :order: 0
 
 
