@@ -1,5 +1,5 @@
-Prise en main de matplotlib
-##########################################
+Premiers pas avec matplotlib
+############################
 
 :date: 2014-02-06 21:06
 :tags: mathplotlib, python
