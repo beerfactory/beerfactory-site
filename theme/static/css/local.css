@@ -78,6 +78,10 @@ p.entry-info {
     font-size: 0.9em;
 }
 
+.entry-content h2 {
+    font-size: 22px;
+}
+
 p.entry-info:before {
     font-family: FontAwesome;
     font-weight: normal;
