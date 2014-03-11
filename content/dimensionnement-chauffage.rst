@@ -5,6 +5,7 @@ Dimensionnement des éléments de chauffage
 :tags: pico, électricité, mathplotlib, puissance, thermique
 :author: Nico
 :category: Pico
+:use_math: true
 
 Le dimensionnement des éléments de la pico-brasserie `lulu la nantaise <http://www.beerfactory.org/wiki/bin/view/Lulu/WebHome>`_ est un préalable essentiel à sa construction. L'objectif est de déterminer les caractéristiques des éléments principaux qui permettront de répondre au `cahier des charges <http://www.beerfactory.org/wiki/bin/view/Lulu/CahierDesCharges>`_, notamment la capacité de brassage désirée. 
 
