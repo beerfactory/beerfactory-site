@@ -18,7 +18,8 @@ Voici le graphique réalisé avec `matplotlib`_ et présent dans l'article sur l
 
 Ce graphique a été généré par le script suivant et disponible sur `github <https://github.com/beerfactory/beerfactory-site/blob/master/scripts/plot_temp_fct_puissance.py>`_ :
 
-.. code:: python
+.. code-block:: python3
+   :linenos: table
 
  import numpy as np
  import matplotlib.pyplot as plt
