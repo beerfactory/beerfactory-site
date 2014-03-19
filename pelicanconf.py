@@ -31,7 +31,7 @@ DEFAULT_PAGINATION = 10
 RELATIVE_URLS = True
 
 THEME="theme"
-PLUGINS = ["sitemap",]
+PLUGINS = ["sitemap","thumbnail"]
 
 DEFAULT_PAGINATION=5
 DISQUS_SITENAME='beerfactory'
