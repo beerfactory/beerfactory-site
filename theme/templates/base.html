@@ -23,7 +23,11 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/local.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/colorbox.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400' rel='stylesheet' type='text/css'>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ SITEURL }}/theme/js/vendor/jquery.js"></script>
+    <script src="{{ SITEURL }}/theme/js/jquery.colorbox-min.js"></script>
     {% endblock head %}
 
     {% if FEED_ALL_ATOM %}
@@ -109,10 +113,11 @@
     {% include "analytics.html" %}
 
     {% block js %}
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="{{ SITEURL }}/theme/js/vendor/jquery.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        $('img.gallery').parent().colorbox({width:"80%"});
+        </script>
     {% endblock js %}
 </body>
 </html>
