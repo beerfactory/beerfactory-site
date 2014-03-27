@@ -9,7 +9,7 @@ Commande de LED par GPIO
 
 Aujourd'hui, je profite de ma présence à `OpenAtelier <http://openatelier.pingbase.net/>`_ pour me faire la main sur la carte Beaglebone Black et commencer à expérimenter quelques montages.
 
-Pour ce premier article, l'objectif (très) simple consiste à commander et faire clignoter une LED connectée à un port GPIO de la carte Beaglebone Black. Le montage réalisée est le suivant :
+Pour ce premier article, l'objectif *très* simple consiste à commander et faire clignoter une LED connectée à un port GPIO de la carte Beaglebone Black. Le montage réalisée est le suivant :
 
 .. thumbnail:: /images/commande_led_thumb.png
    :alt: Carte Beaglebone Black
@@ -20,7 +20,9 @@ Pour ce premier article, l'objectif (très) simple consiste à commander et fair
    :scale: 25%
    :class: gallery
 
-Ce montage est simplement constitué d'une LED en série avec une résistance de 220 ohm. L'alimentation en 3,3V se fait par la patte 13 du connecteur P8 (``P8_13``). L'idée est donc de commander l'état (0 ou 1) de cette sortie pour alimenter ou non la LED et donc l'allumer. 
+Ce montage est simplement constitué d'une LED cablée en série avec une résistance de 220 ohm. Le port GPIO fournissant une tension de 3,3V, la résistance permet de limiter à 15mA le courant tranversant la LED.
+
+Le principe de ce montage consiste à commander l'état (0 ou 1) du port GPIO pour alimenter ou non la LED et donc l'allumer ou l'éteindre. Sur ce montage, le port GPIO choisi est le port nommé ``P8_13`` et qui correspond à la patte 13 du connecteur P8. Pourquoi ce port en particulier alors qu'il en existe tant d'autres ? ... 
 
 Pour ce premier essai, j'ai utilisé la librairie `BoneScript <http://beagleboard.org/Support/BoneScript>`_ qui permet de d'accéder facilement au matériel du Beaglebone Black via le langage Javascript. L'IDE Cloud9 `installé par défaut sur le système Beaglebone Black <http://192.168.7.2:3000>`_ intègre cette librairie. Voici le programme réalisé :
 
@@ -46,5 +48,4 @@ Pour ce premier essai, j'ai utilisé la librairie `BoneScript <http://beagleboar
      b.digitalWrite(ledPin, state);
    }
 
-
-Le script commence (ligne 2) par importer les fonctionnalités de la librairie BoneScript. Les lignes 4,5 et 7 permettent d'obtenir une référence sur la patte P8_13 (sur laquelle est connectée la LED) et de la configurer en mode sortie. L'état de la LED est contrôlé par la méthode ``toggle``, appelée toutes les toutes les 500 milli-secondes. La méthode écrit alternativement les valeurs ``LOW`` ou ``HIGH`` sur la patte ce qui a pour effet de faire clignoter la LED.
+Le script commence (ligne 2) par importer les fonctionnalités de la librairie BoneScript. Les lignes 4 à 7 permettent d'obtenir une référence sur la patte P8_13 (sur laquelle est connectée la LED) et de la configurer en mode sortie (``b.OUTPUT``). L'état de la LED est contrôlé par la méthode ``toggle``, appelée toutes les toutes les 500 milli-secondes. La méthode change alternativement l'état du port (``LOW`` ou ``HIGH``) sur la patte ce qui a pour effet de faire clignoter la LED.
