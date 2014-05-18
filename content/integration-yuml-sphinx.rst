@@ -4,7 +4,7 @@ Intégration de Yuml dans Sphinx-doc
 :date: 2014-01-09 17:15
 :tags: python, sphinx-doc
 :author: Nico
-:category: Développement
+:category: Programmation
 
 Yuml_ est un outil de génération de diagrammes UML en ligne. Il offre une API simple et un langage de description permettant de générer des sorties PNG, JPG, SWF ou PDF pour des diagrammes de classes, d'activités ou de cas d'utilisation. Il suffit de jeter un oeil à ces `pages d'exemples <http://yuml.me/diagram/scruffy/class/samples>`_ pour avoir une idée des fonctionnalités de Yuml_. Voici un exemple : ::
 

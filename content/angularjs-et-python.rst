@@ -4,7 +4,7 @@ AngularJS et Python
 :date: 2014-05-02 10:12
 :tags: python, javascript, AngularJS, Bottle, BeagleBone Black
 :author: Nico
-:category: Développement
+:category: Programmation
 
 
 J'ai commencé il y a quelques jours le `développement d'un outil <https://github.com/njouanin/BBB_admin>`_ qui permettra à terme de visualiser la configuration des ports d'un BeagleBone Black. Réalisé en Python, il utilise différentes commandes systèmes (``uname``, ``ifconfig``, etc.) ainsi que le contenu de l'arobrescence ``sysfs`` pour collecter la configuration système et matérielle de la carte. En particulier il pourra fournir la configuration précise de chacun des ports d'extension du BeagleBone Black. Pour la présentation, les informations collectées seront visualisables via une interface Web réalisée avec `AngluarJS <https://angularjs.org/>`_. Ce post décrit l'architecture retenue pour intégrer Python côté serveur, et `AngluarJS <https://angularjs.org/>`_ côté client.
