@@ -2,7 +2,7 @@ Commande de LED par GPIO
 ########################
 
 :date: 2014-03-11 17:15
-:tags: électronique, BBB, GPIO, BoneScript
+:tags: électronique, BeagleBone Black, GPIO, BoneScript
 :author: Nico
 :category: Beaglebone Black
 :use_math: true

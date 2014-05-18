@@ -2,7 +2,7 @@ Découverte du Beaglebone Black
 ##############################
 
 :date: 2014-03-08 22:11
-:tags: électronique, linux, embarqué, BBB
+:tags: électronique, linux, embarqué, BeagleBone Black
 :author: Nico
 :category: Beaglebone Black
 

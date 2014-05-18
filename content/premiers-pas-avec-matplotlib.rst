@@ -4,7 +4,7 @@ Premiers pas avec matplotlib
 :date: 2014-02-06 21:06
 :tags: mathplotlib, python
 :author: Nico
-:category: Python
+:category: Développement
 
 Pour le `dimensionnement des éléments de chauffage <{filename}/dimensionnement-chauffage.rst>`_, j'ai été amené à utiliser `matplotlib`_ pour tracer et analyser la relation existante puissance et temps de chauffage.
 
