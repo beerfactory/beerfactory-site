@@ -73,6 +73,10 @@ h2.entry-title a
     border-bottom: 1px solid #eeeeee;
 }
 
+.entry-body {
+    margin-top: 10px;
+}
+
 p.entry-info {
     color: #555;
     font-size: 0.9em;
