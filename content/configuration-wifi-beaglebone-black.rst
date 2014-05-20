@@ -2,10 +2,9 @@ Configuration de la connexion Wifi sur BeagleBone Black
 =======================================================
 
 :date: 2014-05-18 12:13
-:tags: wifi, BeagleBone Black, 
+:tags: wifi, BeagleBone Black, Linux
 :author: Nico
 :category: Beaglebone Black
-:Status: draft
 
 La carte BeagleBone black n'intègre pas d'interface réseau Wifi (c'est dommage ...) et il est nécessaire d'utiliser un adaptateur Wifi USB pour la connecter un réseau sans-fil. Cet artcile décrit la procédure à suivre pour installer et configurer un tel adaptateur. Cette procédure est largement inspiré de `ce tutorial Adafruit <https://learn.adafruit.com/beaglebone/wifi>`_ et en fournit donc une traduction
 
