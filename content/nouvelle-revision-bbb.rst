@@ -14,3 +14,10 @@ La communauté Beagleboard `a annoncé <http://www.beagleboard.org/blog/2014-05-
 Concernant le passage sous Debian, cette distribution n'est pas réservée à la révision C, elle est installable sur les anciennes révisions ainsi que sur les autres cartes produites par BeagleBoard. 
 
 J'espère pouvoir tenter cette migration bientôt et faire un retour sur ce blog.
+
+**Mise à jour le 21/05** : Ca y est c'est fait ! Copie de `l'image <http://beagleboard.org/latest-images>`_ sur une carte SD, redémarrage du système (en appuyant sur le bouton dédié), 30 minutes de patience le temps de flasher la mémoire, et hop, la carte redémarre sur debian :
+
+.. code-block:: bash
+
+  root@beaglebone:~# cat /etc/debian_version
+  7.5
