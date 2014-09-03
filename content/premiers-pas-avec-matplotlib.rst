@@ -5,6 +5,7 @@ Premiers pas avec matplotlib
 :tags: mathplotlib, python
 :author: Nico
 :category: Programmation
+:figure: /images/temp_fct_puissance copie_figure.png
 
 Pour le `dimensionnement des éléments de chauffage <{filename}/dimensionnement-chauffage.rst>`_, j'ai été amené à utiliser `matplotlib`_ pour tracer et analyser la relation existante puissance et temps de chauffage.
 

@@ -6,6 +6,7 @@ Alimentation d'une LED connectée à un port GPIO
 :author: Nico
 :category: Beaglebone Black
 :use_math: true
+:figure: /images/alim_led_img2_figure.png
 
 Comme j'ai eu l'occasion de l'illustrer dans `cet article <{filename}/commande-led-par-gpio.rst>`_, le moyen le plus simple pour allumer une LED à partir d'un port GPIO du BeagleBone Black consiste à l'alimenter directement par la tension de sortie du port (3,3V). Toutefois, une résistance doit absolument être placée en série afin de limiter le courant traversant la LED à 6mA. Cette limite correspond à l'intensité maximale que peut fournir le processeur d'après `la fiche du constructeur <http://www.ti.com/lit/ds/symlink/am3359.pdf>`_. Voici ce montage extrèmement simple ...
 
@@ -14,7 +15,7 @@ Comme j'ai eu l'occasion de l'illustrer dans `cet article <{filename}/commande-l
    :align: center
    :scale: 50%
    :class: gallery
-  :alt: Alimentation LED
+   :alt: Alimentation LED
 
 
 Le port GPIO du BeagleBone Black fournit une tension de sortie de 3,3V. Etant donnée une chute de tension de 2V aux bornes de la LED, le courant :math:`I_{led}` circulant dans ce circuit vaut bien :math:`6mA`.

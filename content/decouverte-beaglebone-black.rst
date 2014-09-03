@@ -5,6 +5,7 @@ Découverte du Beaglebone Black
 :tags: électronique, linux, embarqué, BeagleBone Black
 :author: Nico
 :category: Beaglebone Black
+:figure: /images/product_detail_black_lg_figure.jpg
 
 Arrivée sur le marché en avril 2013, la carte Beaglebone Black se positionne en concurrent du `Raspberry Pi`_ avec des caractéristiques techniques identiques ou légèrement supérieures. Processeur `ARM Cortex-A8`_ à 1GHz, 512Mo de RAM, 2Go de flash eMMC, ports à foison le tout construit dans un esprit open-source et à un prix abordable (47€ chez `Lextronic <http://www.lextronic.fr/P28675-platine-beaglebone-black-rev-a6a.html>`_). 
 

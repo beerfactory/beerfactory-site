@@ -6,6 +6,7 @@ Commande de LED par GPIO
 :author: Nico
 :category: Beaglebone Black
 :use_math: true
+:figure: /images/commande_led figure.png
 
 Aujourd'hui, je profite de ma présence à `OpenAtelier <http://openatelier.pingbase.net/>`_ pour me faire la main sur la carte Beaglebone Black et commencer à expérimenter quelques montages.
 
