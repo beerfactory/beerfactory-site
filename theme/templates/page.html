@@ -4,34 +4,16 @@
 {% block meta_description_page %}{{ page.title }}{% endblock meta_description_page %}
 {% block title %}{{ page.title }}{% endblock title %}
 
+{% block header_ext %}
+        <div class="header-post-title-container clearfix">
+            <div class="inner-wrap">
+                <div class="post-title-wrapper">
+                    <h1 class="header-post-title-class">{{ page.title }}</h1>
+                </div>
+             </div>
+        </div>
+{% endblock header_ext %}
+
 {% block content %}
-<section role="main">
-    <header class="hidden-sm" id="index">
-        <div class="container">
-            <h1><i class="fa {% block page_icon %}{% if page.icon is defined %}{{ page.icon }}{% else %}fa-file-text-o{% endif %}{% endblock page_icon %}"></i>
-                &nbsp;{% block page_title %}{{ page.title }}{% endblock page_title %}</h1>
-        </div>
-    </header>
-</section>
-
-{% include "social.html" %}
-
-<section class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <section class="container">
-                <div class="row">
-                    <div class="col-sm-12 a-header">
-                        {% block page_content %}{{ page.content }}{% endblock page_content %}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 a-header">
-                        {% block page_footer_content %}{% endblock page_footer_content %}
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</section>
+    {% block page_content %}{{ page.content }}{% endblock page_content %}
 {% endblock %}
