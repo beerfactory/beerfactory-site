@@ -73,3 +73,5 @@ DATE_FORMATS = {
 }
 
 DEFAULT_DATE_FORMAT = DATE_FORMATS['fr']
+YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%b}/index.html'
