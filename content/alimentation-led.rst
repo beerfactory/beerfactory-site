@@ -14,6 +14,8 @@ Comme j'ai eu l'occasion de l'illustrer dans `cet article <{filename}/commande-l
    :align: center
    :scale: 50%
    :class: gallery
+  :alt: Alimentation LED
+
 
 Le port GPIO du BeagleBone Black fournit une tension de sortie de 3,3V. Etant donnée une chute de tension de 2V aux bornes de la LED, le courant :math:`I_{led}` circulant dans ce circuit vaut bien :math:`6mA`.
 
@@ -33,6 +35,7 @@ Pour être sûr de rester dans les limites du processeur tout en disposant d'une
    :align: center
    :scale: 50%
    :class: gallery
+   :alt: Alimentation LED
 
 Le raisonnement suivant est utilisé pour calculer les résistances R1 et R2 (les valeurs utilisées dans les calculs suivants sont extraites de la `datasheet du transistor BC547 <http://pdf.datasheetcatalog.net/datasheet/fairchild/BC547.pdf>`_).
 

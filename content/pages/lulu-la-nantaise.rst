@@ -3,7 +3,7 @@ Lulu la nantaise
 
 :date: 2014-01-07 21:57
 :author: Nico
-:section: projets
+:section: topbar-menu
 :keywords: brassage amateur, pico-brasserie
 
 Le projet Lulu la nantaise a pour objectif de concevoir et construire une pico-brasserie pilotable par un dispositif électronique et informatique. Consultez les ressources suivantes pour plus d'informations :

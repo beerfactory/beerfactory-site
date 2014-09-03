@@ -5,6 +5,7 @@ Fonctionnement des LED de la carte BeagleBone Black
 :tags: BeagleBone Black, Linux
 :author: Nico
 :category: Beaglebone Black
+:figure: /images/BBB_led.png
 
 La carte BeagleBone Black dispose de 5 LED directement soudées sur la carte et situées de part et d'autres du connecteur RJ45.
 
