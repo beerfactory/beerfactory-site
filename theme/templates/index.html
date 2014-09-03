@@ -1,45 +1,13 @@
-{% extends "base.html" %}
+{% extends "base_side.html" %}
 
 {% block title %}Accueil{% endblock title %}
 
-{% block content %}
-<section role="main">
-    <header class="hidden-sm" id="index">
-        <div class="container" class="header">
-            <h1><i class="fa fa-beer fa-2x"></i>
-                &nbsp;{{ SITENAME }}</h1>
-            <p class="lead">Blog et projets autour de la bière, l'informatique et l'électronique</p>
-        </div>
-    </header>
-</section>
+{% block main_content %}
 
-{% include "social.html" %}
+    {% set summary = 1 %}
+    {% for article in articles_page.object_list %}
+    {% include "_article_detail.html" %}
+    {% endfor %}
 
-<section class="container">
-    <div class="row">
-        <div class="col-sm-8">
-            {% set summary = 1 %}
-            {% for article in articles_page.object_list %}
-            {% include "_article_detail.html" %}
-            {% endfor %}
-        </div>
-        <aside class="col-sm-3 col-sm-offset-1">
-            {% include "widget_recents.html" %}
-            {% include "widget_categories.html" %}
-            {% include "widget_tagcloud.html" %}
-            {% include "google-ad.html" %}
-        </aside>
-    </div>
-    <div class="row">
-        <div class="col-md-12 a-header">
-            <a href="{{ SITEURL }}/archives.html">&larr;&nbsp;Articles plus anciens</a>
-        </div>
-    </div>
-</section>
 
-{% endblock %}
-
-{% block js %}
-{{ super() }}
-    {% include "disqus.html" %}
-{% endblock js %}
+{% endblock main_content %}

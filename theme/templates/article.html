@@ -1,33 +1,20 @@
 {% extends "base_side.html" %}
 
+{% block title %}{{ article.title }}{% endblock title %}
 {% block meta_keywords %}{{ super() }}, {{ article.keywords }}{% endblock meta_keywords %}
 {% block meta_description_page %}{{ article.description }}{% endblock meta_description_page %}
-{% block title %}{{ article.title }}{% endblock title %}
-{% block page_icon %}fa-file-text-o{% endblock page_icon %}
-{% block page_title %}{{ article.category }}{% endblock page_title %}
 
-{% block page_main_content %}
-    {% include "_article_detail.html" %}
-    <div id="comments">
-      <h3>Commentaires</h3>
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'beerfactory'; // required: replace example with your forum shortname
+{% block header_ext %}
+        <div class="header-post-title-container clearfix">
+            <div class="inner-wrap">
+                <div class="post-title-wrapper">
+                    <h1 class="header-post-title-class">{{ article.title }}</h1>
+                </div>
+             </div>
+        </div>
+{% endblock header_ext %}
 
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-{% endblock page_main_content %}
 
-{% block js %}
-{{ super() }}
-    {% include "disqus.html" %}
-{% endblock js %}
+{% block main_content %}
+{% include "_article_detail.html" %}
+{% endblock main_content %}

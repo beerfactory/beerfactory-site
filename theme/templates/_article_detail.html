@@ -1,47 +1,68 @@
 {% if article %}
-    <article class="hentry">
-    <div class="entry-header">
-        <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}" rel="bookmark">{{ article.title }}</a></h2>
-        <p class="entry-info">
-            Ecrit par <span class="vcard author">
-                <a href="{{ article.author.url }}" class="fn url nickname" rel="author"
-                    title="Voir tous les articles de {{ article.author }}">{{ article.author }}</a></span>
-            le {{ article.locale_date }}
-            {% if article.category %}
-                dans <a href="{{ SITEURL }}/{{ article.category.url }}" title="Tous les articles de {{ article.category }}" rel="tag category">{{ article.category }}</a>
+<article class="post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+    {% if summary is defined %}
+    <header class="entry-header">
+        <h1 class="entry-title">
+            <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a>
+        </h1><!-- .entry-title -->
+    </header>
+
+    {% if article.figure %}
+    <figure class="post-featured-image">
+        <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">
+            <img width="750" height="350" src="{{ SITEURL }}/{{ article.figure }}" class="attachment-featured-blog-large wp-post-image">
+        </a>
+    </figure>
+    {% endif %}
+    {% endif %}
+    <div class="entry-content clearfix">
+        <p>
+            {% if summary is defined %}
+                {{ article.summary }}
+            {% else %}
+                {{ article.content }}
+                <div class="tags">
+                    Téggé sur : {% for tag in article.tags %}
+                        <a href="{{ SITEURL }}/{{ tag.url }}" title="Voir tous les articles marqués par {{ tag }}" rel="tag">{{ tag }}</a>
+                        {% if not loop.last %}&nbsp;&nbsp;{% endif %}
+                    {% endfor %}
+                </div>
             {% endif %}
-            |&nbsp;<i class="fa fa-comments">&nbsp;</i><a href="{{ SITEURL }}/{{ article.url }}#disqus_thread"
- title="Laisser un commentaire sur {{ article.title }}">Commenter</a>
         </p>
-    </div>
-    <div class="entry-body">
-        <div class="entry-content">
-        {% if summary is defined %}
-	        {{ article.summary }}
-	        </div>
-	        <p class="continue-reading">
-	              <a href="{{ SITEURL }}/{{ article.url }}" title="Continuer la lecture de {{ object }}" rel="bookmark">Continuer la lecture</a>
-	        </p>
-		{% else %}
-			{{ article.content }}
-		{% endif %}
     </div>
 
-      <div class="entry-footer">
-        <p class="entry-tags">
-          <i class="fa fa-tag">&nbsp;</i><strong>Tags</strong> :
-            {% for tag in article.tags %}
-              <a href="{{ SITEURL }}/{{ tag.url }}" title="Voir tous les articles marqués par {{ tag }}" rel="tag">{{ tag }}</a>{% if not loop.last %}&nbsp;{% endif %}
-            {% endfor %}</p>
-        </p>
-        {% if article.short_url %}
-        <p class="entry-shorturl">
-          <i class="fa fa-link">&nbsp;</i><strong>URL raccourcie</strong> :
-          <a href="{{ SITEURL }}/{{ article.short_url }}" title="URL raccourcie vers {{ article }}" rel="shortlink">{{ object.short_url }}</a>
-        </p>
-        {% endif %}
-        <p class="entry-discussions">
-        </p>
-      </div>
-    </article>
+    {% if summary is defined %}
+    <footer class="entry-meta-bar clearfix">                        
+        <div class="entry-meta clearfix">
+            <span class="by-author"><a href="{{ article.author.url }}">{{ article.author }}</a></span>
+            <span class="date"><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.locale_date }}">{{ article.locale_date }}</a></span>
+            {% if article.category %}
+                <span class="category"><a href="{{ SITEURL }}/{{ article.category.url }}" title="Tous les articles de {{ article.category }}" rel="category tag">{{ article.category }}</a></span>
+            {% endif %}
+            <span class="comments"><a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" title="Commentaire sur {{ article.title }}">Commenter</a></span>
+            <span class="read-more-link"><a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continuer la lecture</a></span>
+        </div>
+    </footer>
+    {% else %}
+    <div id="comments">
+      <h3>Commentaires</h3>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'beerfactory'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    {% endif %}
+</article>
+
 {% endif %}

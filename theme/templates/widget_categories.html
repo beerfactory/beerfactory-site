@@ -1,8 +1,7 @@
 {% if categories %}
-    <h3>Catégories</h3>
-    <ul>
+<ul>
         {% for (c,a) in categories %}
-            <li><a href="{{ SITEURL }}/{{ c.url }}">{{ c.name }}</a></li>
+			<li class="cat-item"><a href="{{ SITEURL }}/{{ c.url }}" title="View all posts filed under {{ c.name }}">{{ c.name }}</a> ({{ a|length }})</li>
         {% endfor %}
-    </ul>
+</ul>
 {% endif %}

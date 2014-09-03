@@ -1,8 +1,7 @@
 {% if articles %}
-    <h3>Articles récents</h3>
-    <ul>
-        {% for a in articles|batch(5)|first %}
-            <li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
-        {% endfor %}
-    </ul>
+<ul>
+    {% for a in articles|batch(3)|first %}
+	<li><a href="{{ SITEURL }}/{{ a.url }}">{{ a.title }}</a></li>
+    {% endfor %}
+</ul>
 {% endif %}

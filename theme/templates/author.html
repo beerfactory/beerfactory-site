@@ -1,44 +1,21 @@
 {% extends "base_side.html" %}
 
-{% block meta_keywords %}{{ super() }}, Auteur {{ author.name }}{% endblock meta_keywords %}
-{% block meta_description_page %}Articles de l'auteur {{ author.name }}{% endblock meta_description_page %}
-{% block title %}Auteur {{ author.name }}{% endblock title %}
-{% block page_icon %}fa-user{% endblock page_icon %}
-{% block page_title %}Auteur {{ author.name }}{% endblock page_title %}
+{% block title %}{{ author }}{% endblock title %}
 
-{% block page_main_content %}
-{% for article in (articles_page.object_list if articles_page else articles) %}
-	{% set summary = 1 %}
-	{% include "_article_detail.html" %}
-{% endfor %}
-
-{% endblock page_main_content %}
-
-{% block page_footer_content %}
-{% if articles_page and articles_paginator.num_pages > 1 %}
-        <div class="row">
-            <div class="col-md-8 columns">
-                <div class="centered">
-                    <ul class="pagination">
-                        {% if articles_page.has_previous() %}
-                            {% set num = articles_page.previous_page_number() %}
-                            <li><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">&larr;</a></li>
-                        {% else %}
-                            <li class="disabled"><a href="#">&larr;</a></li>
-                        {% endif %}
-                        {% for num in range( 1, 1 + articles_paginator.num_pages ) %}
-                            <li class="{{ 'active' if num == articles_page.number else '' }}"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a></li>
-                        {% endfor %}
-                        {% if articles_page.has_next() %}
-                                <li><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">&rarr;</a></li>
-                        {% else %}
-                                <li class="disabled"><a href="#">&rarr;</a></li>
-                    {% endif %}
-                    </ul>
+{% block header_ext %}
+        <div class="header-post-title-container clearfix">
+            <div class="inner-wrap">
+                <div class="post-title-wrapper">
+                    <h1 class="header-post-title-class">Auteur: {{ author }}</h1>
                 </div>
-            </div>
-            <div class="col-md-3">
-            </div>
+             </div>
         </div>
-    {% endif %}
-{% endblock page_footer_content %}
+{% endblock header_ext %}
+
+
+{% block main_content %}
+    {% set summary = 1 %}
+    {% for article in articles %}
+    {% include "_article_detail.html" %}
+    {% endfor %}
+{% endblock main_content %}

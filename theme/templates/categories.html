@@ -1,12 +1,12 @@
 {% extends "base_side.html" %}
 
-{% block title %}{{ category }}{% endblock title %}
+{% block title %}Categories{% endblock title %}
 
 {% block header_ext %}
         <div class="header-post-title-container clearfix">
             <div class="inner-wrap">
                 <div class="post-title-wrapper">
-                    <h1 class="header-post-title-class">Categorie: {{ category }}</h1>
+                    <h1 class="header-post-title-class">Categories</h1>
                 </div>
              </div>
         </div>
@@ -14,8 +14,9 @@
 
 
 {% block main_content %}
-    {% set summary = 1 %}
-    {% for article in articles %}
-    {% include "_article_detail.html" %}
+<ul>
+    {% for (c,a) in categories %}
+        <li><a href="{{ SITEURL }}/{{ c.url }}" title="View all posts filed under {{ c.name }}">{{ c.name }}</a> ({{ a|length }})</li>
     {% endfor %}
+</ul>
 {% endblock main_content %}

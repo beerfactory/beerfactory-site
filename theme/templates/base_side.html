@@ -1,45 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section role="main">
-    <header class="hidden-sm" id="index">
-        <div class="container">
-            <h1><i class="fa {% block page_icon %}fa-file-text-o{% endblock page_icon %}"></i>
-                &nbsp;{% block page_title %}{% endblock page_title %}</h1>
-        </div>
-    </header>
-</section>
 
-<section class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <section class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        {% block page_header_content %}{% endblock page_header_content %}
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-8">
-                        {% block page_main_content %}{% endblock page_main_content %}
-                    </div>
-                    <aside class="col-sm-3 col-sm-offset-1">
-                        {% block page_right_content %}
-                        {% include "widget_recents.html" %}
-                        {% include "widget_categories.html" %}
-                        {% include "widget_tagcloud.html" %}
-                        {% endblock page_right_content %}
-                        {% include "google-ad.html" %}
-                    </aside>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 a-header">
-                        {% block page_footer_content %}{% endblock page_footer_content %}
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</section>
+            <div id="primary">
+                <div id="content" class="clearfix">
+                    {% block main_content %}{% endblock %}
+                </div><!-- #content -->
+            </div><!-- #primary -->
+            <div id="secondary">
+                    {% block side_content %}{% endblock %}
+                <aside id="recent-posts" class="widget widget_recent_entries">
+                    <h3 class="widget-title"><span>Articles récents</span></h3>
+                    {% include "widget_recents.html" %}
+                </aside>
+                <aside id="archives" class="widget widget_archive">
+                    <h3 class="widget-title"><span>Archives</span></h3>
+                    {% include "widget_archives.html" %}
+                </aside>
+                <aside id="categories" class="widget widget_categories">
+                    <h3 class="widget-title"><span>Categories</span></h3>
+                    {% include "widget_categories.html" %}
+                </aside>
+                <aside id="categories" class="widget widget_tag_cloud">
+                    <h3 class="widget-title"><span>Tags</span></h3>
+                    {% include "widget_tagcloud.html" %}
+                </aside>
+                <aside id="Ads" class="widget">
+                    <h3 class="widget-title"><span>Publicité</span></h3>
+                    {% include "google-ad.html" %}
+                </aside>
+            </div>  
 
-{% endblock %}
+
+{% endblock content %}

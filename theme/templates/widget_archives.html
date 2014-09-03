@@ -1,0 +1,49 @@
+{% if YEAR_ARCHIVE_SAVE_AS %}
+  {% set year_archive_strftime = YEAR_ARCHIVE_SAVE_AS|replace("{date:", "")|replace("}", "") %}
+{% else %}
+  {% set year_archive_strftime = None %}
+{% endif %}
+{% if MONTH_ARCHIVE_SAVE_AS %}
+  {% set month_archive_strftime = MONTH_ARCHIVE_SAVE_AS|replace("{date:", "")|replace("}", "") %}
+{% else %}
+  {% set month_archive_strftime = None %}
+{% endif %}
+
+{% macro yearlink(article) %}
+   {% if year_archive_strftime is none %}
+     {{ article.date|strftime("%Y") }}
+   {% else %}
+     <a href="{{SITEURL}}/{{article.date|strftime(year_archive_strftime)}}">{{ article.date|strftime("%Y") }}</a>
+   {% endif %}
+{% endmacro %}
+
+{% macro monthlink(last_date, posts) %}
+  {% if month_archive_strftime is not none %}
+    <li><a href="{{ SITEURL }}/{{ last_date|strftime(month_archive_strftime) }}">{{ last_date|strftime("%B") }}</a>&nbsp;<span class="small">({{ posts }})</span></li>
+  {% endif %}
+{% endmacro %}
+
+<ul>
+{% set last_date, posts = None, 0 %}
+{% for article in dates %}
+  {% if last_date is none or (last_date.year, last_date.month) != (article.date.year, article.date.month) %}
+    {% if posts > 0 %}
+      {{ monthlink(last_date, posts) }}
+    {% endif %}
+    {% if last_date.year != article.date.year %}
+      {% if last_date is not none %}
+      </ul></li>
+      {% endif%}
+      <li>{{ yearlink(article) }}
+      <ul>
+    {% endif %}
+    {% set posts = 0 %}
+  {% endif %}
+
+  {% set last_date = article.date %}
+  {% set posts = posts + 1 %}
+  {% if loop.revindex == 1 %}
+    {{ monthlink(last_date, posts) }}
+  {% endif %}
+ {% endfor %}
+</ul>
