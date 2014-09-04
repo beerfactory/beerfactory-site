@@ -64,5 +64,5 @@ def generate_thumbnails(pelican):
 
 
 def register():
-    signals.finalized.connect(generate_thumbnails)
     directives.register_directive('thumbnail', Thumbnail)
+    signals.finalized.connect(generate_thumbnails)
