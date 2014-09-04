@@ -5,9 +5,14 @@
 {% block main_content %}
 
     {% set summary = 1 %}
-    {% for article in articles_page.object_list %}
+    {% for article in articles|batch(5)|first %}
     {% include "_article_detail.html" %}
     {% endfor %}
+
+<ul class="default-wp-page clearfix">
+            <li class="previous"><a href="{{ SITE_URL }}/blog/archives.html" rel="Previous"><span class="meta-nav">←</span> Article plus anciens</a></li>
+            <li class="next"></li>
+</ul>
 
 
 {% endblock main_content %}

@@ -25,8 +25,6 @@ LINKS =  (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 10
-
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
@@ -36,14 +34,6 @@ PLUGINS = ["sitemap","thumbnail"]
 DEFAULT_PAGINATION=5
 DISQUS_SITENAME='beerfactory'
 
-#Categories display name mapping
-CAT_DISPLAY_NAME_MAP = {'news': 'News',
-                        'nicohb': "Nico homebrewing",
-                        'yeah': "This is a test"}
-#Categories subtitle mapping (subtitles are used in category page)
-CAT_SUBTITLE_MAP = {'news': 'General news about the project',
-                        'nicohb': "Personal blog from the project owner, about computer and beer.",
-                        'yeah': "This is a test"}
 SITEMAP = {
     'format': 'xml',
     'priorities': {
@@ -59,7 +49,9 @@ SITEMAP = {
 }
 
 GOOGLE_ANALYTICS="UA-37658015-2"
-MENUITEMS= ()
+
+MENUITEMS = [('Blog', '/blog/index.html')]
+
 USE_FOLDER_AS_CATEGORY=False
 AUTHORS_SAVE_AS=False
 TAGS_SAVE_AS=False
@@ -73,5 +65,28 @@ DATE_FORMATS = {
 }
 
 DEFAULT_DATE_FORMAT = DATE_FORMATS['fr']
+
 YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/{date:%b}/index.html'
+TAGS_SAVE_AS = ''
+INDEX_SAVE_AS='blog/index.html'
+ARCHIVES_SAVE_AS='blog/archives.html'
+CATEGORIES_SAVE_AS = ''  
+ARTICLE_URL = '/blog/{slug}.html'
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
+ARTICLE_LANG_URL = '/blog/{slug}-{lang}.html'
+ARTICLE_LANG_SAVE_AS = 'blog/{slug}-{lang}.html'
+DRAFT_URL = '/blog/drafts/{slug}.html'
+DRAFT_SAVE_AS = 'blog/drafts/{slug}.html'
+DRAFT_LANG_URL = '/blog/drafts/{slug}-{lang}.html'
+DRAFT_LANG_SAVE_AS = 'blog/drafts/{slug}-{lang}.html'
+PAGE_URL = '/{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
+PAGE_LANG_URL = '/{slug}-{lang}.html'
+PAGE_LANG_SAVE_AS = '{slug}-{lang}.html'
+CATEGORY_URL = '/blog/category/{slug}.html'
+CATEGORY_SAVE_AS = 'blog/category/{slug}.html'
+TAG_URL = '/blog/tag/{slug}.html'
+TAG_SAVE_AS = 'blog/tag/{slug}.html'
+AUTHOR_URL = '/blog/author/{slug}.html'
+AUTHOR_SAVE_AS = 'blog/author/{slug}.html'
