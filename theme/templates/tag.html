@@ -15,7 +15,15 @@
 
 {% block main_content %}
     {% set summary = 1 %}
-    {% for article in articles %}
+    {% for article in articles_page.object_list %}
     {% include "_article_detail.html" %}
     {% endfor %}
+<ul class="default-wp-page clearfix">
+    {% if articles_page.has_previous() %}
+        <li class="next"><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">Articles plus récents <span class="meta-nav">&rarr;</span></a></a></li>
+    {% endif %}
+    {% if articles_page.has_next() %}
+        <li class="previous"><a href="{{ SITEURL }}/{{ articles_next_page.url }}"><span class="meta-nav">&larr;</span> Articles plus anciens</li>
+    {% endif %}
+</ul>
 {% endblock main_content %}
