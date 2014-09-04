@@ -22,7 +22,7 @@
             {% else %}
                 {{ article.content }}
                 <div class="tags">
-                    Téggé sur : {% for tag in article.tags %}
+                    Taggé sur : {% for tag in article.tags %}
                         <a href="{{ SITEURL }}/{{ tag.url }}" title="Voir tous les articles marqués par {{ tag }}" rel="tag">{{ tag }}</a>
                         {% if not loop.last %}&nbsp;&nbsp;{% endif %}
                     {% endfor %}
