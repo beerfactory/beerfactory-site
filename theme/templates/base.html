@@ -39,7 +39,7 @@
     {% include "mathjax.html" %}
 </head>
 
-<body class="page page-template page-template-page-templates blog-image-large-php">
+<body class="{% block body_class %}page page-template page-template-page-templates blog-image-large-php{% endblock %}">
 <div id="page" class="hfeed site">
     <header id="masthead" class="site-header clearfix">
         <div id="header-text-nav-container">
@@ -119,15 +119,14 @@
                                     {% endfor %}
                                 {% endif %}
                             </ul>
-                        </div><!-- .rpwe-block - http://wordpress.org/plugins/recent-posts-widget-extended/ -->
+                        </div><!-- .rpwe-block  -->
                     </aside>
                 </div>
                 <div class="tg-one-fourth tg-column-2">
                     <aside id="text-2" class="widget widget_text">
-                        <h3 class="widget-title"><span>Text widget</span></h3>
+                        <h3 class="widget-title"><span>A propos</span></h3>
                         <div class="textwidget">
-                            <p>We built themes that are eye catching and easy to use, with lots of options and templates to change the look of your site as you wish.</p>
-                            <p>Also we provide extensive support for all our themes.</p>
+                            <p>Site généré par <a href="http://blog.getpelican.com/">Pelican</a></p>
                         </div>
                     </aside>
                 </div>
