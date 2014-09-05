@@ -125,9 +125,13 @@
                 </div>
                 <div class="tg-one-fourth tg-column-2">
                     <aside id="text-2" class="widget widget_text">
-                        <h3 class="widget-title"><span>A propos</span></h3>
-                        <div class="textwidget">
-                            <p>Site généré par <a href="http://blog.getpelican.com/">Pelican</a></p>
+                        <h3 class="widget-title"><span>Links</span></h3>
+                        <div class="menu-footer-menu-container">
+                            <ul id="menu-footer-menu" class="menu">
+                                {% for title,link in LINKS %}
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ link }}">{{ title }}</a></li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </aside>
                 </div>
