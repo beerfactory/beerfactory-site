@@ -1765,11 +1765,13 @@ a#scroll-up:hover {
 	font: normal 18px/1 'Genericons';
 	vertical-align: top;
 }
+/*
 .post .entry-meta .by-author:before { content: '\f304'; }
 .post .entry-meta .date:before { content: '\f307'; }
 .post .entry-meta .category:before { content: '\f301'; }
 .post .entry-meta .comments:before { content: '\f300'; }
 .post .entry-meta .edit-link:before { 	content: '\f411'; }
+*/
 .single #content .tags {
 	margin: 30px 0;
 }

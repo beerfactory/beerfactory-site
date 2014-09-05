@@ -34,12 +34,12 @@
     {% if summary is defined %}
     <footer class="entry-meta-bar clearfix">                        
         <div class="entry-meta clearfix">
-            <span class="by-author"><a href="{{ article.author.url }}">{{ article.author }}</a></span>
-            <span class="date"><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.locale_date }}">{{ article.locale_date }}</a></span>
+            <span class="by-author"><i class="fa fa-user"></i> <a href="{{ article.author.url }}">{{ article.author }}</a></span>
+            <span class="date"><i class="fa fa-calendar"></i> <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.locale_date }}">{{ article.locale_date }}</a></span>
             {% if article.category %}
-                <span class="category"><a href="{{ SITEURL }}/{{ article.category.url }}" title="Tous les articles de {{ article.category }}" rel="category tag">{{ article.category }}</a></span>
+                <span class="category"><i class="fa fa-folder-open"></i> <a href="{{ SITEURL }}/{{ article.category.url }}" title="Tous les articles de {{ article.category }}" rel="category tag">{{ article.category }}</a></span>
             {% endif %}
-            <span class="comments"><a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" title="Commentaire sur {{ article.title }}">Commenter</a></span>
+            <span class="comments"><i class="fa fa-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" title="Commentaire sur {{ article.title }}">Commenter</a></span>
             <span class="read-more-link"><a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continuer la lecture</a></span>
         </div>
     </footer>
