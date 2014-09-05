@@ -9,6 +9,7 @@ SITEURL = 'http://www.beerfactory.org'
 TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = 'fr'
+JINJA_EXTENSIONS = ['jinja2.ext.i18n']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -16,10 +17,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Pelican', 'http://getpelican.com/'),
-          ('Python.org', 'http://python.org/'),
-          ('Jinja2', 'http://jinja.pocoo.org/'),
-          ('You can modify those links in your config file', '#'),)
+LINKS =  (('Forum brassageamateur.com', 'http://www.brassageamateur.com/forum/'),
+          )
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
