@@ -10,6 +10,8 @@ TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = 'fr'
 JINJA_EXTENSIONS = ['jinja2.ext.i18n']
+I18N_GETTEXT_NEWSTYLE=True
+I18N_TEMPLATES_LANG = 'fr'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
