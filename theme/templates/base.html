@@ -68,12 +68,12 @@
                             <h1 class="menu-toggle">Menu</h1>
                             <div class="menu-primary-container">
                                 <ul id="menu-primary" class="menunav-menu">
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="/">Home</a></li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="/">Accueil</a></li>
                                 {% if DISPLAY_PAGES_ON_MENU %}
                                     {% for page in PAGES %}
                                         {% if "topbar-menu" in page.section %}
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                        <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+                                        <a href="{{ page.url }}">{{ page.title }}</a>
                                     </li>
                                         {% endif %}
                                     {% endfor %}
