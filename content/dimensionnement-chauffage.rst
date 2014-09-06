@@ -7,7 +7,7 @@ Dimensionnement des éléments de chauffage
 :category: Pico
 :use_math: true
 
-Le dimensionnement des éléments de la pico-brasserie `lulu la nantaise <http://www.beerfactory.org/wiki/bin/view/Lulu/WebHome>`_ est un préalable essentiel à sa construction. L'objectif est de déterminer les caractéristiques des éléments principaux qui permettront de répondre au `cahier des charges <http://www.beerfactory.org/wiki/bin/view/Lulu/CahierDesCharges>`_, notamment la capacité de brassage désirée. 
+Le dimensionnement des éléments de la pico-brasserie lulu la nantaise est un préalable essentiel à sa construction. L'objectif est de déterminer les caractéristiques des éléments principaux qui permettront de répondre au cahier des charges, notamment la capacité de brassage désirée. 
 
 Dans cette phase de dimensionnement, le choix des éléments de chauffage est délicat. Pour une pico-brasserie électrique il s'agit de déterminer les caractéristiques des éléments chauffants qui assureront la montée en température du moût pendant le brassage et l'ébullition. Ces éléments doivent être correctment dimensionnés afin de répondre à 3 contraintes principales :
 
@@ -17,7 +17,7 @@ Dans cette phase de dimensionnement, le choix des éléments de chauffage est d�
 
 La satisfation de ces contraintes est satisfaite par le calcul d'une puissance adéquate des résistances chauffantes. En théorie, plus la puissance est importante plus le chauffage sera efficace et rapide. En pratique le choix de la puissance devra tenir compte des capacités limitées de l'installation électrique. 
 
-Ainsi le calcul de la puissance de chauffage disponible est primordial puisque c'est cette puissance qui déterminera directement la capacité de brassage et donc le dimensionnement des autres éléments de la brasserie. Les paragraphes suivants exposent le calcul réalisé dans le cas de la pico-brasserie `lulu la nantaise <http://www.beerfactory.org/wiki/bin/view/Lulu/WebHome>`_.
+Ainsi le calcul de la puissance de chauffage disponible est primordial puisque c'est cette puissance qui déterminera directement la capacité de brassage et donc le dimensionnement des autres éléments de la brasserie. Les paragraphes suivants exposent le calcul réalisé dans le cas de la pico-brasserie lulu la nantaise.
 
 Un peu de théorie
 =================

@@ -13,7 +13,7 @@ Arrivée sur le marché en avril 2013, la carte Beaglebone Black se positionne e
    :alt: Carte Beaglebone Black
    :align: center
 
-Pour le projet `Lulu la nantaise <{filename}/lulu-la-nantaise.rst>`_ je suis à la recherche d'une carte capable de servir d'interface avec les capteurs et les actionneurs de la pico-brasserie, mais également d'héberger la partie logicielle assurant le suivi et le pilotage de la pico-brasserie. Dès lors la carte Beaglebone Black apparaît comme un bon candidat; j'ai donc fait l'acquisition d'un exemplaire afin détudier ses possibilités et commencer la mise en oeuvre du projet. 
+Pour le projet `Lulu la nantaise <{filename}pages/lulu-la-nantaise.rst>`_ je suis à la recherche d'une carte capable de servir d'interface avec les capteurs et les actionneurs de la pico-brasserie, mais également d'héberger la partie logicielle assurant le suivi et le pilotage de la pico-brasserie. Dès lors la carte Beaglebone Black apparaît comme un bon candidat; j'ai donc fait l'acquisition d'un exemplaire afin détudier ses possibilités et commencer la mise en oeuvre du projet. 
 
 J'inaugure donc une série d'articles autour de la carte Beaglebone Black, sa prise en main et son utilisation dans le cadre d'un projet embarqué. 
 
