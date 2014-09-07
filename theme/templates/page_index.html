@@ -11,7 +11,11 @@
 {% block content %}
             <div id="primary">
                 <div id="content" class="clearfix">
+                    <article class="page type-page">
+                        <div class="entry-content">
     {% block page_content %}{{ page.content }}{% endblock page_content %}
+                        </div>
+                    </article>
                 </div><!-- #content -->
             </div><!-- #primary -->
 {% endblock %}
