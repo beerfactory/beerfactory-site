@@ -1,0 +1,9 @@
+Page introuvable
+################
+
+:date: 2014-09-07 22:04
+:author: Nico
+:save_as: 404.html
+:template: page_index
+
+Page introuvable
