@@ -9,9 +9,17 @@ Index
 :save_as: index.html
 :template: page_index
 
-Bienvenue
-=========
+Brasser libre
+=============
 
-Ce site a pour objectif de partager mes travaux et mes projets autour du brassage amateur, le développement informatique et l'électronique. Ces trois passions se réunissent lorsqu'il s'agit de concevoir et fabriquer une pico-brasserie pilotée par un dispositif informatique et électronique. 
+Projet libre de développement d'un environnement de brassage complet. 
 
-Ce site Web est construit avec `Bootstrap 3.0 <http://getbootstrap.com/>`_. Les icônes sont fournis par l'excellente police `Awesome Font <http://fortawesome.github.io/Font-Awesome/icons/>`_. Le contenu est généré par `Pelican <http://blog.getpelican.com/>`_.
+OCe projet sera composé de :
+
+* un **modèle de pico-brasserie**, dont l'objectif sera de concevoir un modèle de pico-brasserie, polyvalent et répondant aux besoins de production du brasseur amateur. Le projet mettra à disposition (sous un modèle de licence libre) une documentation complète de construction et d'utilisation du modèle proposé.
+* une interface logicielle et matérielle de **contrôle et d'automatisation d'une pico-brasserie**. 
+* un logiciel de gestion de l'activité de brassage.
+
+
+Appel à contributions
+---------------------
