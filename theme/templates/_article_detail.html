@@ -22,8 +22,8 @@
             {% else %}
                 {{ article.content }}
                 <div class="tags">
-                    Taggé sur : {% for tag in article.tags %}
-                        <a href="{{ SITEURL }}/{{ tag.url }}" title="Voir tous les articles marqués par {{ tag }}" rel="tag">{{ tag }}</a>
+                    Tags : {% for tag in article.tags %}
+                        <a href="{{ SITEURL }}/{{ tag.url }}" title="See all posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>
                         {% if not loop.last %}&nbsp;&nbsp;{% endif %}
                     {% endfor %}
                 </div>
@@ -37,15 +37,15 @@
             <span class="by-author"><i class="fa fa-user"></i> <a href="{{ article.author.url }}">{{ article.author }}</a></span>
             <span class="date"><i class="fa fa-calendar"></i> <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.locale_date }}">{{ article.locale_date }}</a></span>
             {% if article.category %}
-                <span class="category"><i class="fa fa-folder-open"></i> <a href="{{ SITEURL }}/{{ article.category.url }}" title="Tous les articles de {{ article.category }}" rel="category tag">{{ article.category }}</a></span>
+                <span class="category"><i class="fa fa-folder-open"></i> <a href="{{ SITEURL }}/{{ article.category.url }}" title="All {{ article.category }} category posts" rel="category tag">{{ article.category }}</a></span>
             {% endif %}
-            <span class="comments"><i class="fa fa-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" title="Commentaire sur {{ article.title }}">Commenter</a></span>
-            <span class="read-more-link"><a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continuer la lecture</a></span>
+            <span class="comments"><i class="fa fa-comment"></i> <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread" title="Comments on {{ article.title }}">Comment</a></span>
+            <span class="read-more-link"><a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continue reading</a></span>
         </div>
     </footer>
     {% else %}
     <div id="comments">
-      <h3>Commentaires</h3>
+      <h3>Comments</h3>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

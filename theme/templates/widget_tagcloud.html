@@ -3,7 +3,7 @@
         {% for tag in tag_cloud|sort(attribute='0') %}
         	{% for t, a in tags %}
 	        	{% if t == tag.0 %}
-	        		<a href="{{ SITEURL }}/{{ tag.0.url }}" class="tag-{{ tag.1 }}" title="{{ a|length }} articles marqués par {{ tag.0 }}">{{ tag.0 }}</a>
+	        		<a href="{{ SITEURL }}/{{ tag.0.url }}" class="tag-{{ tag.1 }}" title="{{ a|length }} articles tagged with {{ tag.0 }}">{{ tag.0 }}</a>
 	        	{% endif %}
 	    	{% endfor %}
         {% endfor %}

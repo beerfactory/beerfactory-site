@@ -6,7 +6,7 @@
         <div class="header-post-title-container clearfix">
             <div class="inner-wrap">
                 <div class="post-title-wrapper">
-                    <h1 class="header-post-title-class">Categorie: {{ category }}</h1>
+                    <h1 class="header-post-title-class">Category: {{ category }}</h1>
                 </div>
              </div>
         </div>
@@ -21,10 +21,10 @@
 
 <ul class="default-wp-page clearfix">
     {% if articles_page.has_previous() %}
-        <li class="next"><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">Articles plus récents <span class="meta-nav">&rarr;</span></a></a></li>
+        <li class="next"><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">Recent posts <span class="meta-nav">&rarr;</span></a></a></li>
     {% endif %}
     {% if articles_page.has_next() %}
-        <li class="previous"><a href="{{ SITEURL }}/{{ articles_next_page.url }}"><span class="meta-nav">&larr;</span> Articles plus anciens</li>
+        <li class="previous"><a href="{{ SITEURL }}/{{ articles_next_page.url }}"><span class="meta-nav">&larr;</span> Older posts</li>
     {% endif %}
 </ul>
 {% endblock main_content %}

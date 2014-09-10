@@ -57,7 +57,7 @@
                             <h1 id="site-title"> 
                                 <a href="{{ SITEURL }}" title="{{ SITENAME }}" rel="home">{{ SITENAME }}</a>
                             </h1>
-                            <h2 id="site-description">{% trans %}Brasser libre !{% endtrans %}</h2><!-- #site-description -->
+                            <h2 id="site-description">Open-source brewing</h2><!-- #site-description -->
                         </div><!-- #header-text -->
                         {% endblock header_left_section %}
                     </div><!-- #header-left-section -->
@@ -68,7 +68,7 @@
                             <h1 class="menu-toggle">Menu</h1>
                             <div class="menu-primary-container">
                                 <ul id="menu-primary" class="menunav-menu">
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="/">Accueil</a></li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="/">Home</a></li>
                                 {% if DISPLAY_PAGES_ON_MENU %}
                                     {% for page in PAGES %}
                                         {% if "topbar-menu" in page.section %}
@@ -106,7 +106,7 @@
             <div class="footer-widgets-area clearfix">
                 <div class="tg-one-fourth tg-column-1">
                     <aside id="rpwe_widget-2" class="widget rpwe_widget recent-posts-extended">
-                        <h3 class="widget-title"><span>Articles récents</span></h3>
+                        <h3 class="widget-title"><span>Recent posts</span></h3>
                         <div class="rpwe-block">
                             <ul class="rpwe-ul">
                                 {% if articles %}
