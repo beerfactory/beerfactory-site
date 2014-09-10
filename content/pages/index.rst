@@ -9,17 +9,21 @@ Index
 :save_as: index.html
 :template: page_index
 
-Brasser libre
-=============
+Open-source brewing
+===================
 
-Projet libre de développement d'un environnement de brassage complet. 
+Beerfactory is an initiative for providing open-source tools to home brewers.
 
-OCe projet sera composé de :
+This project will consist in :
 
-* un **modèle de pico-brasserie**, dont l'objectif sera de concevoir un modèle de pico-brasserie, polyvalent et répondant aux besoins de production du brasseur amateur. Le projet mettra à disposition (sous un modèle de licence libre) une documentation complète de construction et d'utilisation du modèle proposé.
-* une interface logicielle et matérielle de **contrôle et d'automatisation d'une pico-brasserie**. 
-* un logiciel de gestion de l'activité de brassage.
+* designing a versatile **micro brewery model** and providing open-source manuals for building and using a home brewery based on this model;
+* developing **hardware and software components for monitoring and controlling** a micro brewery. 
+* developing a **software for managing the home brewing** activity.
 
 
-Appel à contributions
+Call to contributions
 ---------------------
+
+More informations on all these project will come soon with dedicated pages on this website. Meanwhile, you can read `our blog </blog>`_ to get some news.
+
+Participations to this projet are welcome. Please contact us on IRC `#beerfactory <irc://irc.freenode.net/beerfactory>`_ or by `email <mailto:contact@beerfactory.org>`_.
