@@ -82,3 +82,6 @@ img.align-left, img.align-right, img.align-center {
 	margin-bottom: 1.625em;
 }
 
+p {
+	text-align: justify;
+}
